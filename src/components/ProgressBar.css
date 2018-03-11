@@ -1,6 +1,9 @@
 .progress-container {
-  align-self: center;
+  flex-direction: row;
+  margin: 25px 25px 25px 25px;
   height: 200px;
+  width:600px;
   background-color: cyan;
-  font-size: 60px;
+  font-size: 10px;
+  counter-reset: step;
 }
