@@ -9,12 +9,11 @@ import Step1 from './step1.js'
 class MainPage extends Component {
   render() {
     return (
-      <div class='wrapper'>
-
+      <div class="wrapper">
+      <img src="../office.jpg" class="welcome-picture"></img>
         <div class='main-header'>HIRED</div>
         <ProgressBar/>
         <Step1/>
-
       </div>
     );
   }

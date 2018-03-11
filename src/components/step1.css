@@ -1,6 +1,7 @@
 .box {
   height: 500px;
   width:1000px;
-  background-color: red;
+  background-color: #3c383e;
   align-self: center;
+  padding: 10 10 10 10;
 }

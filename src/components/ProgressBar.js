@@ -7,11 +7,11 @@ class ProgressBar extends Component {
   render() {
     return (
       <div class='parent'>
-      <ul class='progress-container'>
-        <StepButton>Step 1</StepButton>
-        <StepButton>Step 2</StepButton>
-        <StepButton>Step 3</StepButton>
-      </ul>
+      <div class='progress-container'>
+        <StepButton step_val={1}></StepButton>
+        <StepButton step_val={2}></StepButton>
+        <StepButton step_val={3}></StepButton>
+      </div>
       </div>
     );
   }

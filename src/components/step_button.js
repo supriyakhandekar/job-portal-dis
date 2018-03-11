@@ -5,7 +5,9 @@ import './step_button.css'
 class StepButton extends Component {
   render() {
     return (
-      <li>Test</li>
+      <div class='button-properties'>
+        <p class='progress-text'>{this.props.step_val}</p>
+      </div>
     );
   }
 }
