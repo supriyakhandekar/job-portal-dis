@@ -1,10 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
+.inital_page_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  background-image: url("../images/office.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.inital_description {
+  width: 400px;
+  margin: 20px 30px 30px 20px;
+  height:550px;
+  background-color: white;
+  opacity: 0.8;
+  font-family: Pacifico;
+  letter-spacing: 10px;
+  font-size: 70px;
+}
 
 .wrapper {
   display: flex;
-  height: 100%;
-  background-image: image("../office.jpeg");
+  background-image: url("../images/desk.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
   flex-direction: column;
 
 }

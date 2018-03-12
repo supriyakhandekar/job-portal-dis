@@ -4,6 +4,8 @@
   margin: 25px 25px 25px 25px;
   width:600px;
   justify-content: space-around;
-  border: 1px solid #3c383e;
+
   font-size: 10px;
+  background-color: white;
+  opacity: 0.85;
 }
