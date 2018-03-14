@@ -14,6 +14,9 @@ class MainPage extends Component {
         <div class='inital_description'>
           <p>CT2C</p>
           <p class='company-motto'>Cut to the chase</p>
+          <a href='#section2'>
+            <div class='start-button'>GET STARTED</div>
+          </a>
         </div>
         <div class='inital_description'>
           <p class='step'>Step 1</p>
@@ -30,7 +33,7 @@ class MainPage extends Component {
           </p>
         </div>
       </div>
-      <div class="wrapper">
+      <div class="wrapper" id='section2'>
         <div class='main-header'>CT2C</div>
         <ProgressBar/>
         <Step1/>

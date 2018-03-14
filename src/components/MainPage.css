@@ -72,6 +72,18 @@
 
 .welcome-picture {
   height: 100%;
+}
+
+.start-button {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height:40px;
+  background-color: #81b731;
+  font-size: 20px;
+  text-decoration: none;
 
 }
 
