@@ -13,6 +13,18 @@
 
 }
 
+.next-wrapper {
+
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-right: 129px;
+
+
+}
+
 .inital_description {
  display: flex;
  flex-direction: column;

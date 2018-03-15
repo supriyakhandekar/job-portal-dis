@@ -1,0 +1,8 @@
+.box {
+  height: 500px;
+  width:1000px;
+  background-color: #3c383e;
+  align-self: center;
+  padding: 10 10 10 10;
+  opacity: 0.7;
+}

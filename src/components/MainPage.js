@@ -3,6 +3,10 @@ import './MainPage.css';
 import './ProgressBar.css'
 import ProgressBar from'./ProgressBar.js'
 import Step1 from './step1.js'
+import Step2 from './step2.js'
+import Step3 from './step3.js'
+import Step4 from './step4.js'
+import Next_Button from './next_button.js'
 //import ReactScrollbar from 'react-scrollbar-js';
 
 
@@ -36,7 +40,14 @@ class MainPage extends Component {
       <div class="wrapper" id='section2'>
         <div class='main-header'>CT2C</div>
         <ProgressBar/>
+        <div class='next-wrapper'>
+          <Next_Button/>
+        </div>
         <Step1/>
+        <Step2/>
+        <Step3/>
+        <Step4/>
+
       </div>
       </div>
 

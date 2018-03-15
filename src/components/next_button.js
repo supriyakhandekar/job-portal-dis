@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import './step1.css';
+import './next_button.css';
 
 
-class Step1 extends Component {
+class Next_Button extends Component {
 
   constructor(props) {
     super(props);
     this.state = { /* initial state */ };
   }
-  
+
   render() {
     return (
-      <div class='box'>Step 1</div>
+      <div class='next_button'>NEXT</div>
     );
   }
 }
-export default Step1;
+export default Next_Button;

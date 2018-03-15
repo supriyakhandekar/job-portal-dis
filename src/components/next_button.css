@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Playfair+Display');
+
+.next_button {
+
+  font-family: 'Abel', sans-serif;
+  opacity: 0.8;
+  display:flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width:100px;
+  background-color: #81b731;
+  width:100px;
+
+}

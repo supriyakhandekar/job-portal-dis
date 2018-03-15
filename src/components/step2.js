@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './step1.css';
 
 
-class Step1 extends Component {
+class Step2 extends Component {
 
   constructor(props) {
     super(props);
@@ -11,8 +11,8 @@ class Step1 extends Component {
   
   render() {
     return (
-      <div class='box'>Step 1</div>
+      <div class='box'>Step 2</div>
     );
   }
 }
-export default Step1;
+export default Step2;
