@@ -11,6 +11,7 @@ import Next_Button from './next_button.js'
 
 
 class MainPage extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
