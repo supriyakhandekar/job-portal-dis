@@ -1,0 +1,12 @@
+
+
+
+.step-header {
+
+  font-family: 'Abel', sans-serif;
+  color: 20px;
+  display: flex;
+  height: 250px;
+  flex-direction: row;
+
+}

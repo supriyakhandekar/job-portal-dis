@@ -74,8 +74,8 @@ class MainPage extends Component {
         <div class='main-header'>CT2C</div>
         <ProgressBar/>
         <div class='step-control-wrapper'>
-          <button class='step_button' onClick = {this.incrementStep}>NEXT</button>
-          <button class='step_button' onClick = {this.incrementStep}>PREVIOUS</button>
+          <button class='step_button prev_button' onClick = {this.incrementStep}>PREVIOUS</button>
+          <button class='step_button next_button' onClick = {this.incrementStep}>NEXT</button>
         </div>
         {this.renderStep(this.state.clicks)}
       </div>

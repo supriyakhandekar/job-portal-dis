@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './step1.css';
+import './step_shared.css';
 
 
 class Step4 extends Component {
@@ -11,7 +12,12 @@ class Step4 extends Component {
 
   render() {
     return (
-      <div class='box'>Step 4</div>
+      <div class='box'>
+        <div class='step-header'>
+          <div>4</div>
+          <div>Step 4</div>
+          </div>
+      </div>
     );
   }
 }
