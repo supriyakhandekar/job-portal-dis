@@ -2,6 +2,22 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 @import url('https://fonts.googleapis.com/css?family=Abel|Playfair+Display');
 
+.step_button {
+
+  font-family: 'Abel', sans-serif;
+  opacity: 0.8;
+  display:flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width:100px;
+  background-color: #81b731;
+  width:100px;
+
+}
+
+
 .inital_page_wrapper {
   display: flex;
   align-items: center;
@@ -13,7 +29,7 @@
 
 }
 
-.next-wrapper {
+.step-control-wrapper {
 
   height: 100px;
   display: flex;

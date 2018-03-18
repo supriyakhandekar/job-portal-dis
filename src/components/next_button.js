@@ -6,7 +6,7 @@ class Next_Button extends Component {
 
   constructor(props) {
     super(props);
-    this.state.step = 1;
+    //this.state.step = 1;
   }
 
   render() {

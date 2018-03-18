@@ -11,22 +11,38 @@ import Next_Button from './next_button.js'
 
 
 class MainPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      clicks : 1
+    };
+  }
+  //create state class
+  //store the step
+  //increment each
+
+  incrementStep = () => {
+    this.setState({ clicks: this.state.clicks + 1 });
+  }
+  // changeStep() {
+  //   this.state.step = this.state.step + 1;
+  // }
 
   renderStep(step_number) {
-
     switch(step_number) {
-      case '1':
+      case 1:
         return <Step1/>
-      case '2':
+      case 2:
         return <Step2/>
-      case '3':
+      case 3:
         return <Step3/>
-      case '4':
+      case 4:
         return <Step4/>
       default:
         return <Step1/>
-    }
+    };
   }
+
   render() {
 
     return (
@@ -57,15 +73,11 @@ class MainPage extends Component {
       <div class="wrapper" id='section2'>
         <div class='main-header'>CT2C</div>
         <ProgressBar/>
-        <div class='next-wrapper'>
-          <Next_Button/>
+        <div class='step-control-wrapper'>
+          <button class='step_button' onClick = {this.incrementStep}>NEXT</button>
+          <button class='step_button' onClick = {this.incrementStep}>PREVIOUS</button>
         </div>
-        {this.renderStep(document.getElementbyId('next_id').value.step_val)}
-        <Step1 />
-        <Step2/>
-        <Step3/>
-        <Step4/>
-
+        {this.renderStep(this.state.clicks)}
       </div>
       </div>
 

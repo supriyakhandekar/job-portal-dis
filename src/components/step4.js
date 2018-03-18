@@ -8,7 +8,7 @@ class Step4 extends Component {
     super(props);
     this.state = { /* initial state */ };
   }
-  
+
   render() {
     return (
       <div class='box'>Step 4</div>
