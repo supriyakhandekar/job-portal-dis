@@ -7,11 +7,28 @@ import Step2 from './step2.js'
 import Step3 from './step3.js'
 import Step4 from './step4.js'
 import Next_Button from './next_button.js'
-//import ReactScrollbar from 'react-scrollbar-js';
+//import ReactScrollbar from 'react-scrollbar-js'
 
 
 class MainPage extends Component {
+
+  renderStep(step_number) {
+
+    switch(step_number) {
+      case '1':
+        return <Step1/>
+      case '2':
+        return <Step2/>
+      case '3':
+        return <Step3/>
+      case '4':
+        return <Step4/>
+      default:
+        return <Step1/>
+    }
+  }
   render() {
+
     return (
       <div>
       <div class='inital_page_wrapper'>
@@ -43,7 +60,8 @@ class MainPage extends Component {
         <div class='next-wrapper'>
           <Next_Button/>
         </div>
-        <Step1/>
+        {this.renderStep(document.getElementbyId('next_id').value.step_val)}
+        <Step1 />
         <Step2/>
         <Step3/>
         <Step4/>
