@@ -17,18 +17,27 @@ class MainPage extends Component {
       clicks : 1
     };
   }
-  //create state class
-  //store the step
-  //increment each
+
 
   incrementStep = () => {
     this.setState({ clicks: this.state.clicks + 1 });
   }
-  // changeStep() {
-  //   this.state.step = this.state.step + 1;
-  // }
+
+  decrementStep = () => {
+
+    if (this.state.clicks >= 1) {
+      this.setState({ clicks: this.state.clicks - 1 });
+    }
+  }
+
 
   renderStep(step_number) {
+
+    if (step_number == 5) {
+      step_number = 1
+      this.setState({ clicks: 1});
+    }
+
     switch(step_number) {
       case 1:
         return <Step1/>
@@ -49,7 +58,7 @@ class MainPage extends Component {
       <div>
       <div class='inital_page_wrapper'>
         <div class='inital_description'>
-          <p>CT2C</p>
+          <div>CT2C</div>
           <p class='company-motto'>Cut to the chase</p>
           <a href='#section2'>
             <div class='start-button'>GET STARTED</div>
@@ -74,7 +83,7 @@ class MainPage extends Component {
         <div class='main-header'>CT2C</div>
         <ProgressBar/>
         <div class='step-control-wrapper'>
-          <button class='step_button prev_button' onClick = {this.incrementStep}>PREVIOUS</button>
+          <button class='step_button prev_button' onClick = {this.decrementStep}>PREVIOUS</button>
           <button class='step_button next_button' onClick = {this.incrementStep}>NEXT</button>
         </div>
         {this.renderStep(this.state.clicks)}

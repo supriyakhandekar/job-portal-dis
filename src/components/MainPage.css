@@ -17,7 +17,6 @@
 
 }
 
-
 .inital_page_wrapper {
   display: flex;
   align-items: center;
@@ -129,6 +128,9 @@
 .main-header{
   align-self:center;
   font-size: 50px;
+  background-color: #3c383e;
+  opacity: 0.7;
+  color: white;
   font-weight: 400;
   font-family: 'Abel', sans-serif;
   margin: 15px 15px 15px 15px;

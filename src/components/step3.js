@@ -14,8 +14,8 @@ class Step3 extends Component {
     return (
       <div class='box'>
         <div class='step-header'>
-          <div>3</div>
-          <div>Step 3</div>
+          <div class='step_number'>3</div>
+          <div class='step_description_component'>Step 3: Send. </div>
           </div>
       </div>
     );

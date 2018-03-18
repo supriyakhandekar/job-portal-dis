@@ -4,9 +4,28 @@
 .step-header {
 
   font-family: 'Abel', sans-serif;
-  color: 20px;
+  background-color: white;
+  opacity: 2;
+  font-size: 45px;
   display: flex;
-  height: 250px;
+  height: 100px;
   flex-direction: row;
+
+}
+
+.step_number {
+  margin: 15px;
+  background-color: #81b731;
+  height: 65px;
+  width: 65px;
+  display: flex;
+  justify-content: center;
+}
+
+.step_description_component{
+
+  margin-left: 65px;
+  margin-top: 25px;
+  font-size: 35px;
 
 }
