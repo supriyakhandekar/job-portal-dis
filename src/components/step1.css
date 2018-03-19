@@ -6,12 +6,3 @@
   padding: 10 10 10 10;
   opacity: 0.7;
 }
-
-
-.step-header {
-  display: flex;
-  height: 250px;
-
-  flex-direction: row;
-
-}
