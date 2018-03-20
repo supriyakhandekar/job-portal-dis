@@ -29,3 +29,13 @@
   font-size: 35px;
 
 }
+
+.step_body {
+
+  display: flex;
+  margin: 40px 40px 40px 40px;
+  color: white;
+  height:inherit;
+  flex-direction: column;
+
+}

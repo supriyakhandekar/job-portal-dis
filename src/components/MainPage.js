@@ -31,6 +31,8 @@ class MainPage extends Component {
     }
   }
 
+  //update progress bar background colors
+
 
   renderStep(step_number) {
 
@@ -62,7 +64,7 @@ class MainPage extends Component {
           <div>CT2C</div>
           <p class='company-motto'>Cut to the chase</p>
           <a href='#section2'>
-            <div class='start-button'>GET STARTED</div>
+            <div class='start-button' >GET STARTED</div>
           </a>
         </div>
         <div class='inital_description'>
@@ -76,7 +78,7 @@ class MainPage extends Component {
           </p>
           <p class='step'>Step 3</p>
           <p class='step_description'>
-          Let us find you the emails of the important people so you can send away!
+            Let us find you the emails of the important people so you can send away!
           </p>
         </div>
       </div>

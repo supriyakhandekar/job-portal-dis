@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './step1.css';
+import './step2.css';
 import './step_shared.css';
 
 
@@ -17,6 +17,10 @@ class Step2 extends Component {
           <div class='step_number'>2</div>
           <div class='step_description_component'>Step 2: Create Email Templates.</div>
         </div>
+          <div class='step_body'>
+            <div class='template_body'>Existing Templates:</div>
+            <div class='template_body'>Create a New Template:</div>
+          </div>
       </div>
     );
   }
