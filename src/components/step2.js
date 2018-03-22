@@ -19,7 +19,9 @@ class Step2 extends Component {
         </div>
           <div class='step_body'>
             <div class='template_body'>Existing Templates:</div>
+            <div class='template_container'></div>
             <div class='template_body'>Create a New Template:</div>
+            <div class='template_container'></div>
           </div>
       </div>
     );
