@@ -11,6 +11,7 @@ class Step2 extends Component {
   }
 
   render() {
+    //following code and associated css from https://codepen.io/anon/pen/JLJMoO (for the table)
     return (
       <div class='box'>
         <div class='step-header'>
@@ -19,9 +20,38 @@ class Step2 extends Component {
         </div>
           <div class='step_body'>
             <div class='template_body'>Existing Templates:</div>
-            <div class='template_container'></div>
+            <div class='template_container'>
+              <table class="table-fill">
+                  <thead>
+                    <tr>
+                    <th class="text-left">Template Name</th>
+                    <th class="text-left">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-hover">
+                    <tr>
+                      <td class="text-left">FinTech companies</td>
+                      <td class="text-left">Intro talks about previous finance internships</td>
+                    </tr>
+                    <tr>
+                      <td class="text-left">Consulting companies</td>
+                      <td class="text-left">Large focus on previous state studies</td>
+                    </tr>
+                    <tr>
+                      <td class="text-left">Start-ups</td>
+                      <td class="text-left">Talks about failed start-ups</td>
+                    </tr>
+                    <tr>
+                      <td class="text-left">Research opportunities</td>
+                      <td class="text-left">Extensive references to CV</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
             <div class='template_body'>Create a New Template:</div>
-            <div class='template_container'></div>
+            <div class='template_container'>
+              <div class='plus_button'> </div>
+            </div>
           </div>
       </div>
     );
