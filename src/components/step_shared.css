@@ -6,6 +6,15 @@
 
 }
 
+.confirmation-page-text {
+  font-size: 45px;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+  margin-top: 170px;
+}
+
+
 .step-header {
 
   font-family: 'Abel', sans-serif;

@@ -17,6 +17,9 @@ class Step4 extends Component {
           <div class='step_number'>4</div>
           <div class='step_description_component'>Step 4: Send</div>
           </div>
+          <div class='search-results'>
+            <p class='confirmation-page-text'>You are all set.</p>
+          </div>
       </div>
     );
   }

@@ -32,6 +32,38 @@ class Step1 extends Component {
               <input type="submit" value="Submit" />
           </form>
           <div class='search-results'>
+            <p class='text-style text-style-black'>Results</p>
+            <table class="table-fill">
+                <thead>
+                  <tr>
+                  <th class="text-left">Company</th>
+                  <th class="text-left">Description</th>
+                  <th class="text-left">Select?</th>
+                  </tr>
+                </thead>
+                <tbody class="table-hover">
+                  <tr>
+                    <td class="text-left">Bloomberg</td>
+                    <td class="text-left">(from Wikipedia) Bloomberg L.P. is a privately held financial software, data, and media company headquartered in Midtown Manhattan, New York City</td>
+                    <td class="text-left"></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">Branch Metrics</td>
+                    <td class="text-left">(from Wikipedia) Branch Metrics is a deep linking and business analytics platform offering developer tools for large and independent mobile application companies</td>
+                    <td class="text-left"></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">Deloitte</td>
+                    <td class="text-left"></td>
+                    <td class="text-left"></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left"></td>
+                    <td class="text-left"></td>
+                    <td class="text-left"></td>
+                  </tr>
+                </tbody>
+            </table>
           </div>
         </div>
       </div>

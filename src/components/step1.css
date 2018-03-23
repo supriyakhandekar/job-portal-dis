@@ -25,8 +25,15 @@
   margin-left: 25px;
 }
 
+.text-style-black {
+
+  font-size: 35px;
+  color: black;
+
+}
 .search-results {
   display: flex;
+  flex-direction: column;
   margin-left: 25px;
   margin-top: 25px;
   height: 500px;
