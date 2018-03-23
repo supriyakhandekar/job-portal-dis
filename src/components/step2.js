@@ -50,7 +50,9 @@ class Step2 extends Component {
             </div>
             <div class='template_body'>Create a New Template:</div>
             <div class='template_container'>
-              <div class='plus_button'> </div>
+              <a href=''>
+                <div class='plus_button'> </div>
+              </a>
             </div>
           </div>
       </div>

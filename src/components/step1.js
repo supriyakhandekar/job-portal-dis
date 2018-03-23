@@ -22,7 +22,18 @@ class Step1 extends Component {
           <div class='step_number'>1</div>
           <div class='step_description_component'>Step 1: Find companies.</div>
         </div>
-        <form></form>
+        <div class='step1_body'>
+          <form>
+            <p class='text-style'></p>
+            <label class='text-style'>
+              Search Companies :
+              <input type="text" name="name" />
+            </label>
+              <input type="submit" value="Submit" />
+          </form>
+          <div class='search-results'>
+          </div>
+        </div>
       </div>
     );
   }

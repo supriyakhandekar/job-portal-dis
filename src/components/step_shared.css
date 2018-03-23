@@ -1,5 +1,10 @@
 
+.text-style {
 
+  font-family: 'Abel', sans-serif;
+  font-size: 15px;
+
+}
 
 .step-header {
 
@@ -11,6 +16,13 @@
   height: 100px;
   flex-direction: row;
 
+}
+
+.magnifying-glass {
+  height: 35px;
+  width: 35px;
+  background-image: url("../images/magnifying-glass.jpg");
+  background-size: cover;
 }
 
 .step_number {
