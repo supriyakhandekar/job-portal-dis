@@ -9,6 +9,61 @@
   opacity: 0.9;
 }
 
+.form-header {
+  color: black;
+  font-size: 25px;
+  margin-left: 20px;
+}
+/*code from codepen */
+.form-box {
+  height: 550px;
+  width: 800px;
+  position: absolute;
+  bottom: -170%;
+  left: 20%;
+  opacity: 1;
+  background-color:#81b731;
+}
+
+.submit-button {
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  height:50px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-left: 20px;
+
+}
+
+.question-format {
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  font-size: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  color:black;
+}
+
+.question-textarea {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-style: italic;
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  color: 	#696969;
+  font-size: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.form-questions {
+  height:inherit;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
 .template_body {
   display: flex;
   height: 30%;
