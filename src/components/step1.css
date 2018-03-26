@@ -25,10 +25,15 @@
   margin-left: 25px;
 }
 
-.text-style-black {
+#text-style-black {
 
   font-size: 35px;
   color: black;
+
+}
+
+#step1_table {
+  margin-top: -15px;
 
 }
 .search-results {
@@ -36,7 +41,7 @@
   flex-direction: column;
   margin-left: 25px;
   margin-top: 25px;
-  height: 500px;
+  height: 700px;
   width: 900px;
   background-color: white;
 

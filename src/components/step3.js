@@ -33,7 +33,14 @@ class Step3 extends Component {
                 <td class="text-left">Bloomberg</td>
                 <td class="text-left">Kate Antonucci</td>
                 <td class="text-left">Recruiter</td>
-                <td class="text-left">Template 4</td>
+                <td class="text-left">
+                  <select>
+                    <option value="volvo">Template 1</option>
+                    <option value="saab">Template 2</option>
+                    <option value="mercedes">Template 3</option>
+                    <option value="audi">Template 4</option>
+                  </select>
+                </td>
                 <td class="text-left">kantonucci@bloomberg.net</td>
                 <td class="text-left">
                   <a href="">
@@ -46,7 +53,14 @@ class Step3 extends Component {
                 <td class="text-left">Facebook</td>
                 <td class="text-left">Katie Crona</td>
                 <td class="text-left">Recruiter</td>
-                <td class="text-left">Template 4</td>
+                <td class="text-left">
+                  <select>
+                    <option value="volvo">Template 1</option>
+                    <option value="saab">Template 2</option>
+                    <option value="mercedes">Template 3</option>
+                    <option value="audi">Template 4</option>
+                  </select>
+                </td>
                 <td class="text-left">kcrona@fb.com</td>
                 <td class="text-left">
                   <a href="">
@@ -59,7 +73,14 @@ class Step3 extends Component {
                 <td class="text-left">Branch Metrics</td>
                 <td class="text-left">Vivianna de la Torre</td>
                 <td class="text-left">Recruiter</td>
-                <td class="text-left">Template 4</td>
+                <td class="text-left">
+                  <select>
+                    <option value="volvo">Template 1</option>
+                    <option value="saab">Template 2</option>
+                    <option value="mercedes">Template 3</option>
+                    <option value="audi">Template 4</option>
+                  </select>
+                </td>
                 <td class="text-left">vdelatorre@branch.io</td>
                 <td class="text-left">
                   <a href=''>
@@ -72,7 +93,14 @@ class Step3 extends Component {
                 <td class="text-left">Oliver Wyman</td>
                 <td class="text-left">Joe Smith</td>
                 <td class="text-left">Recruiter</td>
-                <td class="text-left">Template 4</td>
+                <td class="text-left">
+                  <select>
+                    <option value="volvo">Template 1</option>
+                    <option value="saab">Template 2</option>
+                    <option value="mercedes">Template 3</option>
+                    <option value="audi">Template 4</option>
+                  </select>
+                </td>
                 <td class="text-left">jsmith@ow.com</td>
                 <td class="text-left">
                   <a href="">
@@ -85,7 +113,14 @@ class Step3 extends Component {
                 <td class="text-left">Deloitte</td>
                 <td class="text-left">Tom Ford</td>
                 <td class="text-left">Recruiter</td>
-                <td class="text-left">Template 4</td>
+                <td class="text-left">
+                  <select>
+                    <option value="volvo">Template 1</option>
+                    <option value="saab">Template 2</option>
+                    <option value="mercedes">Template 3</option>
+                    <option value="audi">Template 4</option>
+                  </select>
+                </td>
                 <td class="text-left">tford@deloitte.com</td>
                 <td class="text-left">
                   <a href="">
@@ -98,7 +133,14 @@ class Step3 extends Component {
                 <td class="text-left">McKinsey</td>
                 <td class="text-left">Anna Loomis</td>
                 <td class="text-left">Recruiter</td>
-                <td class="text-left">Template 4</td>
+                <td class="text-left">
+                  <select>
+                    <option value="volvo">Template 1</option>
+                    <option value="saab">Template 2</option>
+                    <option value="mercedes">Template 3</option>
+                    <option value="audi">Template 4</option>
+                  </select>
+                </td>
                 <td class="text-left">jsmith@ow.com</td>
                 <td class="text-left">
                   <a href=''>

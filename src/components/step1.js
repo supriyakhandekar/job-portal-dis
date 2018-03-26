@@ -32,8 +32,8 @@ class Step1 extends Component {
               <input type="submit" value="Submit" />
           </form>
           <div class='search-results'>
-            <p class='text-style text-style-black'>Results</p>
-            <table class="table-fill">
+            <p class='text-style' id='text-style-black'>Results</p>
+            <table class="table-fill" id='step1_table'>
                 <thead>
                   <tr>
                   <th class="text-left">Company</th>
@@ -53,13 +53,8 @@ class Step1 extends Component {
                     <td class="text-left"></td>
                   </tr>
                   <tr>
-                    <td class="text-left">Deloitte</td>
-                    <td class="text-left"></td>
-                    <td class="text-left"></td>
-                  </tr>
-                  <tr>
-                    <td class="text-left"></td>
-                    <td class="text-left"></td>
+                    <td class="text-left">Facebook</td>
+                    <td class="text-left">(from Wikipedia) Facebook is an American online social media and social networking service company based in Menlo Park, California.</td>
                     <td class="text-left"></td>
                   </tr>
                 </tbody>
