@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   height: 800px;
-  background-image: url("../images/office.jpeg");
+  background-image: url("../images/iteration2_landing.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -52,15 +52,31 @@
 
 }
 
+
+#title {
+  display: flex;
+  flex-direction: column;
+  opacity: 0.8;
+  margin-right: 200px;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+  font-family: 'Abel', sans-serif;
+  width: 400px;
+  height: 275px;
+  background-color: white;
+
+}
+
 .inital_description {
  display: flex;
- background-color: white;
  flex-direction: column;
-  width: 400px;
-  margin: 20px 30px 30px 20px;
-  height:550px;
+ margin-right: 150px;
+ margin-top: 100px;
+  width: 375px;
+  height:450px;
   opacity: 0.8;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   font-size: 70px;
   font-family: 'Abel', sans-serif;
@@ -69,18 +85,19 @@
 
 
 .step {
-  font-size: 35px;
-  margin-top: 20px;
+  font-size: 65px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 20px;
   margin-bottom: 10px;
-
-
+  display: flex;
+  justify-content: center;
 }
 
 .step_description {
-
-  font-size: 15px;
-  margin-top: 10px;
-  margin-left: 20px;
+  margin-top: -10px;
+  font-size: 20px;
+  margin-left: 90px;
   margin-right: 20px;
 
 
@@ -88,15 +105,14 @@
 }
 .company-motto {
 
-  font-size: 14px;
+  font-size: 19px;
   letter-spacing: 6px;
-
 
 }
 
 .wrapper {
   display: flex;
-  background-image: url("../images/pink-desk.jpg");
+  background-image: url("../images/iteration2_application.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   flex-direction: column;
