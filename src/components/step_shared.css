@@ -8,10 +8,10 @@
 
 .confirmation-page-text {
   font-size: 45px;
-  justify-content: center;
+  margin-left: 30px;
   align-items: flex-start;
   display: flex;
-  margin-top: 170px;
+  color: white;
 }
 
 
@@ -51,12 +51,30 @@
 
 }
 
+.checkbox-style {
+
+  height: 70px;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 40px;
+  justify-content: center;
+}
+
+.select-all-box {
+
+  font-size: 20px;
+  margin-left: 100px;
+  margin-top: 40px;
+
+}
 .step_body {
 
   display: flex;
+  width: 700px;
   margin: 40px 40px 40px 40px;
   color: white;
   height:inherit;
+
   flex-direction: column;
 
 }

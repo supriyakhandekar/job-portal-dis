@@ -10,7 +10,10 @@ render() {
       <div class='form-box'>
         <div class='form-questions'>
           <div class='form-header'>Create a Template.</div>
-
+          <p class='question-format'>Name your template</p>
+          <textarea class='question-textarea'>Start-ups</textarea>
+          <p class='question-format'>Write a description for your template.</p>
+          <textarea class='question-textarea'>This template is for start-ups</textarea>
           <p class='question-format'>Write your Introductory Pitch.</p>
           <textarea class='question-textarea'>Summer Analyst</textarea>
           <p class='question-format'>What position are you applying for?</p>
@@ -56,40 +59,48 @@ class Step2 extends Component {
           <div class='step_number'>2</div>
           <div class='step_description_component'>Step 2: Create Email Templates.</div>
         </div>
-          <div class='step_body'>
-            <div class='template_body'>Existing Templates:</div>
-            <div class='template_container'>
-              <table class="table-fill">
-                  <thead>
-                    <tr>
-                    <th class="text-left">Template Name</th>
-                    <th class="text-left">Description</th>
-                    </tr>
-                  </thead>
-                  <tbody class="table-hover">
-                    <tr>
-                      <td class="text-left">FinTech companies</td>
-                      <td class="text-left">Intro talks about previous finance internships</td>
-                    </tr>
-                    <tr>
-                      <td class="text-left">Consulting companies</td>
-                      <td class="text-left">Large focus on previous state studies</td>
-                    </tr>
-                    <tr>
-                      <td class="text-left">Start-ups</td>
-                      <td class="text-left">Talks about failed start-ups</td>
-                    </tr>
-                    <tr>
-                      <td class="text-left">Research opportunities</td>
-                      <td class="text-left">Extensive references to CV</td>
-                    </tr>
-                  </tbody>
-              </table>
+          <div class='template-body'>
+            <div class='template-text'>
+                  <div class='template_body'>MY TEMPLATES:</div>
+                  <div class='new_template_button' onClick = {this.togglePopup.bind(this)}>Add New Template</div>
+                  {this.state.popupDisplayed ? <TemplateForm closePopup={this.togglePopup.bind(this)}/> : null}
+
             </div>
-            <div class='template_body'>Create a New Template:</div>
-            <div class='template_container'>
-            <div class='plus_button' onClick = {this.togglePopup.bind(this)}> </div>
-            {this.state.popupDisplayed ? <TemplateForm closePopup={this.togglePopup.bind(this)}/> : null}
+              <div class='template_container'>
+                <table class="table-fill">
+                    <thead>
+                      <tr>
+                      <th class="text-left">Template Name</th>
+                      <th class="text-left">Description</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-hover">
+                      <tr class='example-template'>
+                        <td class="text-left">Example Template 1</td>
+                        <td class="text-left">This is an example Template 1</td>
+                      </tr>
+                      <tr class='example-template'>
+                        <td class="text-left">Example Template 2</td>
+                        <td class="text-left">This is an example Template 2</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">FinTech companies</td>
+                        <td class="text-left">Intro talks about previous finance internships</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">Consulting companies</td>
+                        <td class="text-left">Large focus on previous state studies</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">Start-ups</td>
+                        <td class="text-left">Talks about failed start-ups</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">Research opportunities</td>
+                        <td class="text-left">Extensive references to CV</td>
+                      </tr>
+                    </tbody>
+                </table>
             </div>
           </div>
       </div>

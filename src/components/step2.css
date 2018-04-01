@@ -16,15 +16,21 @@
 }
 /*code from codepen */
 .form-box {
-  height: 550px;
+  height: 800px;
   width: 800px;
   position: absolute;
-  bottom: -170%;
+  bottom: -210%;
   left: 20%;
   opacity: 1;
   background-color:#81b731;
 }
 
+
+.example-template {
+
+  color: #81b731;
+
+}
 .submit-button {
   font-family: "Roboto", helvetica, arial, sans-serif;
   height:30px;
@@ -65,29 +71,48 @@
   justify-content: center;
 
 }
+
+
+.template-body {
+  display: flex;
+  height: 700px;
+  flex-direction: column;
+
+}
 .template_body {
   display: flex;
-  height: 30%;
-  margin-top: 15px;
+  height: 17%;
+  font-size: 30px;
+  color: white;
+  margin-top: 50px;
+  margin-left: 200px;
+
 }
 
+.template-text {
+
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+}
 .template_container {
 
   height: 750px;
-  margin-top: -120px;
   width: inherit;
-  background-color: white;
 }
 
-.plus_button {
 
-  background-image: url('../images/plus.png');
-  width: 180px;
-  height: 180px;
-  margin-left: 30px;
-  margin-top: 30px;
-  background-repeat: no-repeat;
-  background-size: cover;
+.new_template_button {
+
+  display: flex;
+  justify-content: center;
+  opacity: 0.8;
+  align-items: center;
+  width: 150px;
+  color: white;
+  margin-top: 45px;
+  margin-left: 50px;
+  background-color: #81b731;
 
 }
 

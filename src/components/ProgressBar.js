@@ -12,6 +12,7 @@ class ProgressBar extends Component {
         <StepButton step_val={2}></StepButton>
         <StepButton step_val={3}></StepButton>
       </div>
+        <button id='shopping-button'>SHOPPING BAG (3)</button>
       </div>
     );
   }

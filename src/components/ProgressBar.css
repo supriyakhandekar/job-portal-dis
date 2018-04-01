@@ -1,9 +1,22 @@
 .progress-container {
   display:flex;
   flex-direction: row;
-  margin: 10px 25px 25px 25px;
+  margin-left: 160px;
   width:600px;
   justify-content: space-around;
   font-size: 10px;
   background-color: white;
+}
+
+#shopping-button {
+
+  width: 150px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  margin-left: 33px;
+  background-color: #81b731;
+
 }
