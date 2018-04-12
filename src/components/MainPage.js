@@ -19,7 +19,6 @@ class MainPage extends Component {
     };
   }
 
-
   incrementStep = () => {
     this.setState({ clicks: this.state.clicks + 1 });
   }
@@ -63,7 +62,7 @@ class MainPage extends Component {
         <div id='title'>
           <div>CT2C</div>
           <p class='company-motto'>Cut to the chase</p>
-          <a href='#section2'>
+          <a href='#section2' class='start-anchor'>
             <div class='start-button' >GET STARTED</div>
           </a>
         </div>
@@ -84,7 +83,7 @@ class MainPage extends Component {
       </div>
       <div class="wrapper" id='section2'>
         <div class='main-header'>CT2C</div>
-        <ProgressBar/>
+        <ProgressBar clickCount = {this.state.clicks}/>
         <div class='step-control-wrapper'>
           <button class='step_button prev_button' onClick = {this.decrementStep}>PREVIOUS</button>
           <button class='step_button next_button' onClick = {this.incrementStep}>NEXT</button>

@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
-import StepButton from './step_button.js'
 import './ProgressBar.css';
 
 
 class ProgressBar extends Component {
-  render() {
+
+
+  renderTest(val) {
+
+    if(val == 2) {
+      return <div>HELLLO WHATSUP</div>;
+    }
+  }
+
+    render() {
     return (
       <div class='parent'>
       <div class='progress-container'>
-        <StepButton step_val={1}></StepButton>
-        <StepButton step_val={2}></StepButton>
-        <StepButton step_val={3}></StepButton>
+        <div class = 'button_properties' style={{backgroundColor: (this.props.clickCount == 1) ? '#81b731' :'none'}}>1</div>
+        <div class = 'button_properties'  style={{backgroundColor: (this.props.clickCount == 2) ? '#81b731':'none'}} click_val = {this.props.clicks}>2</div>
+        <div class = 'button_properties' click_val = {this.props.clicks } style={{backgroundColor: (this.props.clickCount == 3) ? '#81b731':'none'}} >3</div>
       </div>
         <button id='shopping-button'>SHOPPING BAG (3)</button>
       </div>
     );
   }
 }
+
 export default ProgressBar;

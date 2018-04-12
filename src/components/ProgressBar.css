@@ -20,3 +20,21 @@
   background-color: #81b731;
 
 }
+
+.button_properties {
+  display:flex;
+  width: 35px;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #3c383e;
+  font-size: 15px;
+  font-family:sans-serif;
+  border-radius: 50%;
+  margin: 10px 10px 10px 10px;
+}
+
+
+.progress-text {
+  font-weight: 900;
+}
