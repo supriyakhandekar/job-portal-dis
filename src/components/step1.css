@@ -7,6 +7,18 @@
   opacity: 0.7;
 }
 
+.add-to-cart {
+
+  height: 30px;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #81b731;
+  font-family: 'Abel', sans-serif;
+}
+
+
 .step1_body {
 
   display:flex;

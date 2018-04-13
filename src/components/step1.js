@@ -16,6 +16,22 @@ class Step1 extends Component {
      };
   }
 
+
+  renderResults(query) {
+
+      //make query to else {
+
+
+      //get Results and return objects
+
+
+      //generate HTML code based on items in object and return
+
+      
+  }
+
+
+
   render() {
     return (
       <div class='box'>
@@ -61,8 +77,10 @@ class Step1 extends Component {
                   <tr>
                     <td class="text-left">Bloomberg</td>
                     <td class="text-left">(from Wikipedia) Bloomberg L.P. is a privately held financial software, data, and media company headquartered in Midtown Manhattan, New York City</td>
-                    <td class="text-left checkbox">
-                      <input class='checkbox-style' type='checkbox'/>
+                    <td class="text-left">
+                      <div class='add-to-cart'>
+                        Add to Cart
+                      </div>
                     </td>
                   </tr>
                   <tr>

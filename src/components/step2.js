@@ -5,6 +5,18 @@ import './step_shared.css';
 
 class TemplateForm extends Component {
 
+
+  //will take the values from the text areas and generate appropriate templates
+  //needs to send this generated template to the parent
+  generateTemplate() {
+
+
+
+
+
+
+  }
+
 render() {
   return (
       <div class='form-box'>
@@ -37,12 +49,56 @@ render() {
 class Step2 extends Component {
 
   //code for popup inspired from : https://codepen.io/bastianalbers/pen/PWBYvz?editors=0010
-
   constructor(props) {
     super(props);
     this.state = {
       popupDisplayed :false
     };
+  }
+
+  //intialize some example templates that can be rendered immediately
+  example_templates = []
+
+  //this array will be added to when a user generates a new template
+  user_templates = []
+
+
+  //this function will be called to render appropriate table entries
+  //will check what elements are in the user_templates and if they are new
+  renderTemplateEntries() {
+
+    table_frame = `<table class="table-fill">
+                          <tbody class="table-hover">
+                            ${expression}
+                          </tbody>
+                      </table>`
+    template_entry = `<tr class='example-template'>
+                        <td class="text-left">${template1}/td>
+                        <td class="text-left">${template2}</td>
+                      </tr>`
+
+    //generate string of template renderTemplateEntries
+    //while there are elements in the json list
+
+    table_entry_list = ""
+    var i;
+    for (i = 1; i < user_templates.length; i++) {
+      
+      table_entry_list += user_templates[i]
+
+    }
+
+
+    //put together under table frame
+
+
+
+  }
+
+  //adds a new template to the list of user templates
+  //upon receving a value from a child, add to the list
+  addUserTemplate() {
+
   }
 
   togglePopup() {
@@ -64,7 +120,6 @@ class Step2 extends Component {
                   <div class='template_body'>MY TEMPLATES:</div>
                   <div class='new_template_button' onClick = {this.togglePopup.bind(this)}>Add New Template</div>
                   {this.state.popupDisplayed ? <TemplateForm closePopup={this.togglePopup.bind(this)}/> : null}
-
             </div>
               <div class='template_container'>
                 <table class="table-fill">
