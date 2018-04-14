@@ -7,6 +7,53 @@
   opacity: 0.7;
 }
 
+
+.company-name {
+
+  width: 150px;
+  height: 30px;
+  background-color: none;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid 	#D3D3D3;
+  border-radius: 2px;
+  margin: 2px 2px 2px 2px;
+  display: flex;
+  height: 30px;
+  align-items: center;
+  font-size: 20px;
+  padding-left: 10px;
+  font-family: 'Abel', sans-serif;
+}
+
+.cart-button {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 400px;
+  align-self: center;
+
+}
+
+
+li:hover {
+
+  background-color: #666B85;
+  color: white;
+
+}
+
+.list-container {
+
+  background-color: white;
+  padding-left: 0px;
+}
+
 .add-to-cart {
 
   height: 30px;
@@ -33,14 +80,13 @@
 
   font-size: 30px;
   color: white;
-  margin-top: 25px;
+  margin-top: 15px;
   margin-left: 25px;
 }
 
 #text-style-black {
 
   font-size: 35px;
-  margin-left: 145px;
   font-weight: 100;
 
 }

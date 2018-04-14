@@ -3,34 +3,47 @@ import './step1.css';
 import './step_shared.css';
 
 
+//code inspired from https://codepen.io/mtclmn/pen/QyPVJp?editors=1010
+
+class List extends Component {
+  render() {
+    return (
+      <ul class='list-container'>
+      {
+        this.props.items.map(function(item) {
+
+          return <li className="list-item" data-category={item} key={item}>
+                  <div class='company-name'>{item}</div>
+                  <button class='cart-button'>Add to cart</button>
+                 </li>
+        })
+       }
+      </ul>
+    )
+  }
+}
 
 class Step1 extends Component {
 
   constructor(props) {
     super(props);
     this.state=  {
-        step1 : true,
-        step2 : false,
-        step3 : false,
-        step4 : false
+        items : [ "Branch Metrics",
+        "Kidaptive",
+        "Farmer Analytics",
+        "Spire",
+        "Samsara",
+        "Qualtrics",
+        "Tinker",
+        "CareDash",
+        "500px",
+        "affirm",
+        "53",
+        "Glow",
+        "Groupon",
+        "Magic Leap"]
      };
   }
-
-
-  renderResults(query) {
-
-      //make query to else {
-
-
-      //get Results and return objects
-
-
-      //generate HTML code based on items in object and return
-
-      
-  }
-
-
 
   render() {
     return (
@@ -48,57 +61,9 @@ class Step1 extends Component {
             </label>
               <input type="submit" value="Submit" />
           </form>
-          <div class='filters'>
-
-              <div class='filter-item checkbox-item'>
-                <p>Company size (smallest to largest):</p>
-                <input class='checkbox-style' type='checkbox'/>
-              </div>
-              <div class='filter-item checkbox-item'>
-                <p>Round of funding (most funding to least)</p>
-                <input class='checkbox-style' type='checkbox'/>
-              </div>
-              <div class='filter-item checkbox-item'>
-                <p>Popular Options (most popular to least)</p>
-                <input class='checkbox-style' type='checkbox'/>
-              </div>
-          </div>
           <div class='search-results'>
             <p class='text-style' id='text-style-black'>Results</p>
-            <table class="table-fill" id='step1_table'>
-                <thead>
-                  <tr>
-                  <th class="text-left">Company</th>
-                  <th class="text-left">Description</th>
-                  <th class="text-left">Select?</th>
-                  </tr>
-                </thead>
-                <tbody class="table-hover">
-                  <tr>
-                    <td class="text-left">Bloomberg</td>
-                    <td class="text-left">(from Wikipedia) Bloomberg L.P. is a privately held financial software, data, and media company headquartered in Midtown Manhattan, New York City</td>
-                    <td class="text-left">
-                      <div class='add-to-cart'>
-                        Add to Cart
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-left">Branch Metrics</td>
-                    <td class="text-left">(from Wikipedia) Branch Metrics is a deep linking and business analytics platform offering developer tools for large and independent mobile application companies</td>
-                    <td class="text-left checkbox">
-                      <input class='checkbox-style' type='checkbox'/>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-left">Facebook</td>
-                    <td class="text-left">(from Wikipedia) Facebook is an American online social media and social networking service company based in Menlo Park, California.</td>
-                    <td class="text-left checkbox">
-                      <input class='checkbox-style' type='checkbox'/>
-                    </td>
-                  </tr>
-                </tbody>
-            </table>
+            <List items={this.state.items}/>
           </div>
         </div>
       </div>
