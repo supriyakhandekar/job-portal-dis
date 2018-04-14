@@ -41,8 +41,32 @@ class Step1 extends Component {
         "53",
         "Glow",
         "Groupon",
-        "Magic Leap"]
+        "Magic Leap",
+        "Rigetti",
+        "Soylent",
+        "Within"]
      };
+  }
+
+  search(event) {
+    var currentList = this.state.items;
+    var newList = [];
+    var searchVal = event.target.value;
+    var i;
+
+    for (i = 0; i < currentList.length; i++) {
+      if(currentList[i].includes(searchVal)) {
+        newList.push(currentList[i]);
+      }
+
+      this.setState({items : newList});
+    }
+
+    currentList = currentList.filter(function(item){
+      return item.toLowerCase().search(
+        event.target.value.toLowerCase()) !== -1;
+    });
+    this.setState({items: currentList});
   }
 
   render() {
@@ -57,7 +81,7 @@ class Step1 extends Component {
             <p class='text-style'></p>
             <label class='text-style'>
               Search Companies :
-              <input type="text" name="name" />
+              <input type="text" name="name" placeholder="Soylent" onChange={this.search.bind(this)}/>
             </label>
               <input type="submit" value="Submit" />
           </form>
