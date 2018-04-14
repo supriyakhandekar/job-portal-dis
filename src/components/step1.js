@@ -2,19 +2,28 @@ import React, { Component } from 'react';
 import './step1.css';
 import './step_shared.css';
 
-
 //code inspired from https://codepen.io/mtclmn/pen/QyPVJp?editors=1010
 
 class List extends Component {
+
+  constructor(props) {
+    super(props);
+    this.clicked = this.clicked.bind(this);
+
+  }
+
+ clicked(item) {
+   this.props.addToCart(item);
+ }
+
   render() {
     return (
       <ul class='list-container'>
       {
         this.props.items.map(function(item) {
-
           return <li className="list-item" data-category={item} key={item}>
                   <div class='company-name'>{item}</div>
-                  <button class='cart-button'>Add to cart</button>
+                  <button class='cart-button' onClick = {this.clicked(item)}>Add to cart</button>
                  </li>
         })
        }
@@ -44,16 +53,25 @@ class Step1 extends Component {
         "Magic Leap",
         "Rigetti",
         "Soylent",
-        "Within"]
+        "Within"],
+        searchedItems : [],
+        selectedItems: []
      };
+
+     this.addToCart = this.addToCart.bind(this);
+  }
+
+  addToCart(item) {
+    this.state.selectedItems.push(item);
   }
 
   search(event) {
-    var currentList = this.state.items;
-    var newList = [];
-    var searchVal = event.target.value;
-    var i;
+    var currentList = this.state.items,
+        newList = [],
+        searchVal = event.target.value,
+        i;
 
+    /*
     for (i = 0; i < currentList.length; i++) {
       if(currentList[i].includes(searchVal)) {
         newList.push(currentList[i]);
@@ -61,11 +79,12 @@ class Step1 extends Component {
 
       this.setState({items : newList});
     }
-
+    */
     currentList = currentList.filter(function(item){
       return item.toLowerCase().search(
         event.target.value.toLowerCase()) !== -1;
     });
+
     this.setState({items: currentList});
   }
 
@@ -80,14 +99,12 @@ class Step1 extends Component {
           <form>
             <p class='text-style'></p>
             <label class='text-style'>
-              Search Companies :
-              <input type="text" name="name" placeholder="Soylent" onChange={this.search.bind(this)}/>
+              <input class='search' type="text" name="name" placeholder="Magic Leap" onChange={this.search.bind(this)}/>
             </label>
-              <input type="submit" value="Submit" />
           </form>
           <div class='search-results'>
             <p class='text-style' id='text-style-black'>Results</p>
-            <List items={this.state.items}/>
+            <List items={this.state.items}  addToCart={this.addToCart.bind(this)}/>
           </div>
         </div>
       </div>

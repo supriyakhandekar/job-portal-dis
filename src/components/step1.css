@@ -7,6 +7,12 @@
   opacity: 0.7;
 }
 
+.search {
+
+  width: 270px;
+  height:35px;
+  font-size: 20px;
+}
 
 .company-name {
 
