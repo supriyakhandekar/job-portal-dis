@@ -9,7 +9,6 @@ class List extends Component {
   constructor(props) {
     super(props);
     this.clicked = this.clicked.bind(this);
-
   }
 
  clicked(item) {
@@ -110,7 +109,7 @@ class Step1 extends Component {
           <div class='search-results'>
             <p class='text-style' id='text-style-black'>Results</p>
             <List items={this.state.items}  addToCart={this.addToCart.bind(this)}/>
-            {alert(this.state.selectedItems)}
+
           </div>
         </div>
       </div>

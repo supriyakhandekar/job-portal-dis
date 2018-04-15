@@ -27,6 +27,10 @@ class TemplateForm extends Component {
     console.log(this.state.name);
   }
 
+  onClick(event) {
+    this.props.closePopup();
+    this.props.getFormValues(this.state.name, this.state.description);
+  }
 
 render() {
   return (
@@ -49,9 +53,8 @@ render() {
           <p class='question-format'>Concluding Remarks?</p>
             <textarea class='question-textarea'>I would greatly value an opportunity to work at your company.
           I truly hope that you will consider my application.</textarea>
-          <button class='submit-button' onClick={this.props.closePopup} >SUBMIT</button>
+          <button class='submit-button' onClick={this.props.closePopup} onClick = {this.onClick.bind(this)}>SUBMIT</button>
         </div>
-        {this.props.formVals}
       </div>
   )
 }
@@ -64,7 +67,8 @@ class Step2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      popupDisplayed :false
+      popupDisplayed :false,
+      formValue : {}
     };
   }
   //intialize some example templates that can be rendered immediately
@@ -73,21 +77,15 @@ class Step2 extends Component {
   //user_templates = []
 
 
-  getFormValues() {
+  getFormValues(name, description, intro, position, experience, conclusion) {
+    var obj = { name_key: name,
+           description_key: description,
+           intro_key: intro,
+           position_key: position,
+           experience_key: experience,
+           conclusion_key: conclusion };
 
-    /*
-    var template_obj = {'name':'place-holder'};
-    template_obj.name = this.state.name;
-    /*
-    template_obj['description'] = this.state.decription;
-    template_obj['intro'] = this.state.intro;
-    template_obj['pos'] = this.state.pos;
-    template_obj['exp'] = this.state.exp;
-    template_obj['concl'] = this.state.conclusion;
-    */
-
-    return this.state;
-
+    this.setState({formValue: obj});
   }
 
   //this function will be called to render appropriate table entries
@@ -96,12 +94,10 @@ class Step2 extends Component {
 
   renderTemplateEntries(obj) {
 
-
-
     var table_frame = <table class="table-fill">
                           <tbody class="table-hover">
                             <tr>
-                              <td class="text-left">{obj.name}</td>
+                              <td class="text-left">{obj.name_key}</td>
                             </tr>
                           </tbody>
                       </table>;
@@ -127,7 +123,6 @@ class Step2 extends Component {
   //upon receving a value from a child, add to the list
 /*
   addUserTemplate() {
-
   }
 */
   togglePopup() {
@@ -148,10 +143,10 @@ class Step2 extends Component {
             <div class='template-text'>
                   <div class='template_body'>MY TEMPLATES:</div>
                   <div class='new_template_button' onClick = {this.togglePopup.bind(this)}>Add New Template</div>
-                  {this.state.popupDisplayed ? <TemplateForm closePopup={this.togglePopup.bind(this)} formVals = {this.getFormValues.bind(this)}/> : null}
+                  {this.state.popupDisplayed ? <TemplateForm closePopup={this.togglePopup.bind(this)} getFormValues = {this.getFormValues.bind(this)}/> : null}
             </div>
             <div class='template_container'>
-              {this.renderTemplateEntries(this.getFormValues())}
+              {this.renderTemplateEntries(this.state.formValue)}
             </div>
           </div>
       </div>
