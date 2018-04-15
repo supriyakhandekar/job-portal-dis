@@ -17,13 +17,16 @@ class List extends Component {
  }
 
   render() {
+
+    var clickHandler = this.clicked.bind(this);
+
     return (
       <ul class='list-container'>
       {
         this.props.items.map(function(item) {
           return <li className="list-item" data-category={item} key={item}>
                   <div class='company-name'>{item}</div>
-                  <button class='cart-button' onClick = {this.clicked(item)}>Add to cart</button>
+                  <button class='cart-button' onClick={() => clickHandler(item)}>Add to cart</button>
                  </li>
         })
        }
@@ -62,7 +65,9 @@ class Step1 extends Component {
   }
 
   addToCart(item) {
-    this.state.selectedItems.push(item);
+    var selected = this.state.selectedItems;
+    selected.push(item);
+    this.setState({selectedItems:selected});
   }
 
   search(event) {
@@ -105,6 +110,7 @@ class Step1 extends Component {
           <div class='search-results'>
             <p class='text-style' id='text-style-black'>Results</p>
             <List items={this.state.items}  addToCart={this.addToCart.bind(this)}/>
+            {alert(this.state.selectedItems)}
           </div>
         </div>
       </div>

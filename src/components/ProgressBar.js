@@ -4,14 +4,14 @@ import './ProgressBar.css';
 
 class ProgressBar extends Component {
 
-
-  renderTest(val) {
-
-    if(val == 2) {
-      return <div>HELLLO WHATSUP</div>;
-    }
+  constructor(props) {
+    super(props);
   }
+
     render() {
+    console.log("hey");
+    console.log(this.props.clickCount);
+
     return (
       <div class='parent'>
       <div class='progress-container'>
@@ -21,6 +21,7 @@ class ProgressBar extends Component {
       </div>
         <button id='shopping-button'>SHOPPING BAG (3)</button>
       </div>
+
     );
   }
 }
