@@ -59,7 +59,6 @@ class Step1 extends Component {
         searchedItems : [],
         selectedItems: []
      };
-
      this.addToCart = this.addToCart.bind(this);
   }
 
@@ -109,7 +108,6 @@ class Step1 extends Component {
           <div class='search-results'>
             <p class='text-style' id='text-style-black'>Results</p>
             <List items={this.state.items}  addToCart={this.addToCart.bind(this)}/>
-
           </div>
         </div>
       </div>

@@ -60,29 +60,15 @@ class MainPage extends Component {
       <div>
       <div class='inital_page_wrapper'>
         <div id='title'>
-          <div>CT2C</div>
+          <div>C2TC</div>
           <p class='company-motto'>Cut to the chase</p>
           <a href='#section2' class='start-anchor'>
             <div class='start-button' >GET STARTED</div>
           </a>
         </div>
-        <div class='inital_description'>
-          <p class='step'>1.</p>
-          <p class='step_description'>
-          Search for companies that interest you. Add them to your 'shopping bag' if you like what you see!
-          </p>
-          <p class='step'>2.</p>
-          <p class='step_description'>
-          Create a personalized template and let us fill in the company-specific information for every company you find interesting!
-          </p>
-          <p class='step'>3.</p>
-          <p class='step_description'>
-            Let us find you the emails of the important people so you can send away!
-          </p>
-        </div>
       </div>
       <div class="wrapper" id='section2'>
-        <div class='main-header'>CT2C</div>
+        <div class='main-header'></div>
         <ProgressBar clickCount = {this.state.clicks}/>
         <div class='step-control-wrapper'>
           <button class='step_button prev_button' onClick = {this.decrementStep}>PREVIOUS</button>

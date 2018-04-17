@@ -68,7 +68,8 @@ class Step2 extends Component {
     super(props);
     this.state = {
       popupDisplayed :false,
-      formValue : {}
+      formValue : {},
+      templatesCreated : []
     };
   }
   //intialize some example templates that can be rendered immediately
@@ -78,6 +79,7 @@ class Step2 extends Component {
 
 
   getFormValues(name, description, intro, position, experience, conclusion) {
+
     var obj = { name_key: name,
            description_key: description,
            intro_key: intro,
@@ -88,6 +90,14 @@ class Step2 extends Component {
     this.setState({formValue: obj});
   }
 
+
+  //gets values and generates a template
+  //adds to state
+  createTemplate() {
+
+
+
+  }
   //this function will be called to render appropriate table entries
   //will check what elements are in the user_templates and if they are new
 
@@ -95,6 +105,12 @@ class Step2 extends Component {
   renderTemplateEntries(obj) {
 
     var table_frame = <table class="table-fill">
+                          <thead>
+                            <tr>
+                            <th class="text-left">TEMPLATE NAME</th>
+                            <th class="text-left">Description</th>
+                            </tr>
+                          </thead>
                           <tbody class="table-hover">
                             <tr>
                               <td class="text-left">{obj.name_key}</td>
