@@ -16,7 +16,6 @@ class List extends Component {
  }
 
   render() {
-
     var clickHandler = this.clicked.bind(this);
 
     return (
@@ -55,7 +54,10 @@ class Step1 extends Component {
         "Magic Leap",
         "Rigetti",
         "Soylent",
-        "Within"],
+        "Within",
+        "Kensho",
+        "Medium",
+        "Mesosphere"],
         searchedItems : [],
         selectedItems: []
      };
@@ -73,7 +75,6 @@ class Step1 extends Component {
         newList = [],
         searchVal = event.target.value,
         i;
-
     /*
     for (i = 0; i < currentList.length; i++) {
       if(currentList[i].includes(searchVal)) {
@@ -108,6 +109,7 @@ class Step1 extends Component {
           <div class='search-results'>
             <p class='text-style' id='text-style-black'>Results</p>
             <List items={this.state.items}  addToCart={this.addToCart.bind(this)}/>
+            {this.props.getBagItems(this.state.selectedItems)}
           </div>
         </div>
       </div>

@@ -12,11 +12,17 @@ import Next_Button from './next_button.js'
 
 class MainPage extends Component {
 
+
   constructor(props) {
     super(props);
     this.state = {
-      clicks : 1
+      clicks : 1,
+      bagItems :[]
     };
+  }
+
+  getBagItems(list) {
+    //this.setState({bagItems : list});
   }
 
   incrementStep = () => {
@@ -31,8 +37,6 @@ class MainPage extends Component {
   }
 
   //update progress bar background colors
-
-
   renderStep(step_number) {
 
     if (step_number == 5) {
@@ -42,9 +46,9 @@ class MainPage extends Component {
 
     switch(step_number) {
       case 1:
-        return <Step1/>
+        return <Step1 getBagItems = {this.getBagItems.bind(this)}/>
       case 2:
-        return <Step2/>
+        return <Step2 />
       case 3:
         return <Step3/>
       case 4:
@@ -55,7 +59,6 @@ class MainPage extends Component {
   }
 
   render() {
-
     return (
       <div>
       <div class='inital_page_wrapper'>
@@ -77,7 +80,6 @@ class MainPage extends Component {
         {this.renderStep(this.state.clicks)}
       </div>
       </div>
-
     );
   }
 }

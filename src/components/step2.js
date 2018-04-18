@@ -18,18 +18,48 @@ class TemplateForm extends Component {
       conclusion: 'conclusion'
     };
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleChangeName = this.handleChangeName.bind(this);
+    this.handleChangeDesc = this.handleChangeDesc.bind(this);
+    this.handleChangePos = this.handleChangePos.bind(this);
+    this.handleChangeExp = this.handleChangeExp.bind(this);
+    this.handleChangeIntro = this.handleChangeIntro.bind(this);
+    this.handleChangeConc = this.handleChangeConc.bind(this);
     //this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
+  handleChangeName(event) {
     this.setState({name: event.target.value});
-    console.log(this.state.name);
+  }
+
+  handleChangeDesc(event) {
+    this.setState({description: event.target.value});
+  }
+
+  handleChangeIntro(event) {
+
+    this.setState({intro: event.target.value});
+  }
+
+  handleChangePos(event) {
+
+    this.setState({position: event.target.value});
+  }
+
+  handleChangeExp(event) {
+
+    this.setState({experience: event.target.value});
+  }
+
+  handleChangeConc(event) {
+
+    this.setState({conclusion: event.target.value});
   }
 
   onClick(event) {
     this.props.closePopup();
-    this.props.getFormValues(this.state.name, this.state.description);
+    this.props.getFormValues(this.state.name, this.state.description,
+                              this.state.intro, this.state.position, this.state.experience,
+                              this.state.conclusion);
   }
 
 render() {
@@ -38,20 +68,20 @@ render() {
         <div class='form-questions'>
           <div class='form-header'>Create a Template.</div>
           <p class='question-format' >Name your template</p>
-            <textarea class='question-textarea' onChange={this.handleChange}>This template is for start-ups</textarea>
+            <textarea class='question-textarea' onChange={this.handleChangeName}>This template is for start-ups</textarea>
           <p class='question-format'>Write a description for your template.</p>
-            <textarea class='question-textarea' onChange={this.handleChange}>This template is for start-ups</textarea>
+            <textarea class='question-textarea' onChange={this.handleChangeDesc}>This template is for start-ups</textarea>
           <p class='question-format'>Write your Introductory Pitch.</p>
-            <textarea class='question-textarea'>Summer Analyst</textarea>
+            <textarea class='question-textarea' onChange={this.handleChangeIntro}>Summer Analyst</textarea>
           <p class='question-format'>What position are you applying for?</p>
-            <textarea class='question-textarea'>I am a third year student at Yale-NUS College, majoring in
+            <textarea class='question-textarea' onChange={this.handleChangePos} >I am a third year student at Yale-NUS College, majoring in
           Economics and minoring in Arts and Humanities. Having experience in both the technical and theoretical
           space, I feel that I would contribute great work to your company</textarea>
           <p class='question-format'>Talk about your experience...</p>
-            <textarea class='question-textarea'>Two summers ago, I interned at Goldman Sachs and last year,
+            <textarea class='question-textarea' onChange={this.handleChangeExp}>Two summers ago, I interned at Goldman Sachs and last year,
           I worked at Oliver Wyman...</textarea>
           <p class='question-format'>Concluding Remarks?</p>
-            <textarea class='question-textarea'>I would greatly value an opportunity to work at your company.
+            <textarea class='question-textarea' onChange={this.handleChangeConc}>I would greatly value an opportunity to work at your company.
           I truly hope that you will consider my application.</textarea>
           <button class='submit-button' onClick={this.props.closePopup} onClick = {this.onClick.bind(this)}>SUBMIT</button>
         </div>
@@ -59,7 +89,6 @@ render() {
   )
 }
 }
-
 
 class Step2 extends Component {
 
@@ -89,21 +118,35 @@ class Step2 extends Component {
 
     this.setState({formValue: obj});
   }
-
-
   //gets values and generates a template
   //adds to state
-  createTemplate() {
+  createTemplate(obj) {
 
+    var greeting = 'Dear Christy,';
 
+    var middle = `My name is Supriya and I am reaching out to you because I am
+                  very interested in applying
+                  for a job at Samsara' ${obj.intro_key}`;
+
+    var end = `${obj.experience_key}`
+
+    var template_obj = {'greeting': greeting, 'middle': middle, 'end': end};
+
+    //this.setState({templatesCreated: template_obj});
 
   }
   //this function will be called to render appropriate table entries
   //will check what elements are in the user_templates and if they are new
 
+  showPreview(obj) {
+
+    this.createTemplate(obj);
+    var template_string = this.state.templatesCreated;
+    return <div>Test</div>
+  }
+
 
   renderTemplateEntries(obj) {
-
     var table_frame = <table class="table-fill">
                           <thead>
                             <tr>
@@ -113,11 +156,14 @@ class Step2 extends Component {
                           </thead>
                           <tbody class="table-hover">
                             <tr>
-                              <td class="text-left">{obj.name_key}</td>
+                              <td class="text-left" onClick = {this.showPreview(obj)}>{obj.name_key}</td>
+                              <td class="text-left">{obj.description_key}</td>
                             </tr>
                           </tbody>
                       </table>;
 
+    //generate template string
+    this.createTemplate(obj);
     return table_frame;
    }
     //generate string of template renderTemplateEntries
