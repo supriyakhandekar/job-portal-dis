@@ -18,10 +18,15 @@ class MainPage extends Component {
     this.state = {
       clicks : 1,
       bagItems :[],
-      templates : []
+      templates : [],
+      showBagContent: false
     };
-    
     this.toggleBagView = this.toggleBagView.bind(this);
+  }
+
+  toggleBagView() {
+    this.setState({showBagContent: !this.state.showBagContent});
+    alert(this.state.showBagContent);
   }
 
   addToCart(list) {
@@ -89,8 +94,9 @@ class MainPage extends Component {
         <div class='step-container'>
           {this.renderStep(this.state.clicks)}
           <div class='shopping_cart'>
-            <div id='shopping-button'>SHOPPING BAG</div>
-            </div>
+            <div id='shopping-button' onClick={this.toggleBagView.bind(this)}>SHOPPING BAG</div>
+            {this.state.showBagContent ? <div class='shopping-list'></div> : (null)}
+          </div>
         </div>
       </div>
       </div>
