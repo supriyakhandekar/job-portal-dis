@@ -22,11 +22,17 @@ class MainPage extends Component {
       showBagContent: false
     };
     this.toggleBagView = this.toggleBagView.bind(this);
+    this.renderBagItems = this.renderBagItems.bind(this);
   }
 
   toggleBagView() {
     this.setState({showBagContent: !this.state.showBagContent});
-    alert(this.state.showBagContent);
+  }
+
+  renderBagItems(list) {
+    list.map(function(item) {
+      return (<div class='cart-item'>{item}</div>);
+    })
   }
 
   addToCart(list) {
@@ -43,6 +49,7 @@ class MainPage extends Component {
       this.setState({ clicks: this.state.clicks - 1 });
     }
   }
+
 
   //update progress bar background colors
   renderStep(step_number) {
@@ -95,7 +102,9 @@ class MainPage extends Component {
           {this.renderStep(this.state.clicks)}
           <div class='shopping_cart'>
             <div id='shopping-button' onClick={this.toggleBagView.bind(this)}>SHOPPING BAG</div>
-            {this.state.showBagContent ? <div class='shopping-list'></div> : (null)}
+            <div class='shopping-list'>
+              {this.state.showBagContent ? this.renderBagItems(this.state.bagItems) : (null)}
+            </div>
           </div>
         </div>
       </div>

@@ -30,12 +30,12 @@
 }
 
 .prev_button {
-  margin-left: 40px;
-}
 
+}
 
 .next_button {
 
+  margin-right: 70px;
 
 }
 .step-control-wrapper {
@@ -159,7 +159,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-left: 180px;
+
 
 }
 #shopping-button {
@@ -167,10 +167,18 @@
   display: flex;
   justify-content: flex-end;
   background-color: #81b731;
-  margin-left: 40px;
   align-items: center;
   width: 120px;
   height: 40px;
+
+}
+
+
+.cart-item {
+
+  width: 100px;
+  height: 60px;
+  background-color: cyan;
 
 }
 
@@ -179,7 +187,6 @@
   height: 400px;
   width: 120px;
   margin-left: 40px;
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-self: flex-start;
@@ -188,8 +195,8 @@
 
 .shopping-list {
 
-  background-color: cyan;
-  width: 300px;
+  background-color: white;
+  width: 120px;
   height: 400px;
 
 }
