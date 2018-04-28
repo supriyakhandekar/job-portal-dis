@@ -20,6 +20,8 @@ class MainPage extends Component {
       bagItems :[],
       templates : []
     };
+    
+    this.toggleBagView = this.toggleBagView.bind(this);
   }
 
   addToCart(list) {
@@ -79,13 +81,17 @@ class MainPage extends Component {
         </div>
       </div>
       <div class="wrapper" id='section2'>
-        <div class='main-header'></div>
-        <ProgressBar clickCount = {this.state.clicks} cart = {this.state.bagItems}/>
-        <div class='step-control-wrapper'>
-          <button class='step_button prev_button' onClick = {this.decrementStep}>PREVIOUS</button>
-          <button class='step_button next_button' onClick = {this.incrementStep}>NEXT</button>
+        <div class='navigation'>
+            <button class='step_button prev_button' onClick = {this.decrementStep}>PREVIOUS</button>
+            <ProgressBar clickCount = {this.state.clicks} cart = {this.state.bagItems}/>
+            <button class='step_button next_button' onClick = {this.incrementStep}>NEXT</button>
         </div>
-        {this.renderStep(this.state.clicks)}
+        <div class='step-container'>
+          {this.renderStep(this.state.clicks)}
+          <div class='shopping_cart'>
+            <div id='shopping-button'>SHOPPING BAG</div>
+            </div>
+        </div>
       </div>
       </div>
     );

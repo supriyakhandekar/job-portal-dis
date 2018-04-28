@@ -6,10 +6,25 @@ class ProgressBar extends Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      showBagContent: false
+    };
+    this.toggleBagView = this.toggleBagView.bind(this);
   }
+
 
   renderShoppingBag() {
     alert(this.props.cart);
+    this.props.cart.map(function(item) {
+      return <div class='cart-items'>
+              <div>{item}</div>
+             </div>
+    })
+  }
+
+
+  toggleBagView() {
+    this.setState({showBagContent: !this.state.showBagContent});
   }
 /*
   renderBagItems(items) {
@@ -20,10 +35,6 @@ class ProgressBar extends Component {
     })
   }
 */
-
-
-
-
   render() {
     return (
       <div class='parent'>
@@ -32,12 +43,9 @@ class ProgressBar extends Component {
           <div class = 'button_properties'  style={{backgroundColor: (this.props.clickCount >= 2) ? '#81b731':'white'}} click_val = {this.props.clicks}>2</div>
           <div class = 'button_properties' click_val = {this.props.clicks} style={{backgroundColor: (this.props.clickCount >= 3) ? '#81b731':'white'}} >3</div>
         </div>
-        <div id='shopping-button' onClick = {this.renderShoppingBag.bind(this)}>SHOPPING BAG</div>
       </div>
     )
   }
-
-
 }
 
 export default ProgressBar;
