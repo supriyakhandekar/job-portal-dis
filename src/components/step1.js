@@ -65,16 +65,15 @@ class Step1 extends Component {
   }
 
   addToCart(item) {
-    var selected = this.state.selectedItems;
+    var selected = this.props.cart;
     //check if the bag already has the item
     //avoiding duplicates
     if (selected.indexOf(item) < 0) {
       selected.push(item);
     }
-
-    this.setState({selectedItems:selected});
-    var bag = this.state.selectedItems;
-    alert(`Your shopping bag has: ${bag}`)
+    this.props.addToCart(selected);
+    //var bag = this.state.selectedItems;
+    //alert(`Your shopping bag has: ${bag}`)
   }
 
   search(event) {
@@ -118,7 +117,6 @@ class Step1 extends Component {
           <div class='search-results'>
             <p class='text-style' id='text-style-black'>Results</p>
             <List items={this.state.items}  addToCart={this.addToCart.bind(this)}/>
-            {this.props.getBagItems(this.state.selectedItems)}
           </div>
         </div>
       </div>

@@ -7,7 +7,6 @@ import Step2 from './step2.js';
 import Step3 from './step3.js';
 import Step4 from './step4.js';
 import Next_Button from './next_button.js';
-import $ from 'jquery';
 //import ReactScrollbar from 'react-scrollbar-js'
 
 
@@ -18,14 +17,13 @@ class MainPage extends Component {
     super(props);
     this.state = {
       clicks : 1,
-      bagItems :[]
+      bagItems :[],
+      templates : []
     };
   }
 
-
-
-  getBagItems(list) {
-    //this.setState({bagItems : list});
+  addToCart(list) {
+    this.setState({bagItems : list});
   }
 
   incrementStep = () => {
@@ -49,7 +47,9 @@ class MainPage extends Component {
 
     switch(step_number) {
       case 1:
-        return <Step1 getBagItems = {this.getBagItems.bind(this)}/>
+        return <Step1
+                  cart = {this.state.bagItems}
+                  addToCart = {this.addToCart.bind(this)}/>
       case 2:
         return <Step2 />
       case 3:
@@ -80,7 +80,7 @@ class MainPage extends Component {
       </div>
       <div class="wrapper" id='section2'>
         <div class='main-header'></div>
-        <ProgressBar clickCount = {this.state.clicks}/>
+        <ProgressBar clickCount = {this.state.clicks} cart = {this.state.bagItems}/>
         <div class='step-control-wrapper'>
           <button class='step_button prev_button' onClick = {this.decrementStep}>PREVIOUS</button>
           <button class='step_button next_button' onClick = {this.incrementStep}>NEXT</button>

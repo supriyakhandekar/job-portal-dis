@@ -7,6 +7,10 @@ class ProgressBar extends Component {
   constructor(props) {
     super(props);
   }
+
+  renderShoppingBag() {
+    alert(this.props.cart);
+  }
 /*
   renderBagItems(items) {
     //<div id="myDropdown" class="dropdown-content">
@@ -18,6 +22,8 @@ class ProgressBar extends Component {
 */
 
 
+
+
   render() {
     return (
       <div class='parent'>
@@ -26,10 +32,12 @@ class ProgressBar extends Component {
           <div class = 'button_properties'  style={{backgroundColor: (this.props.clickCount >= 2) ? '#81b731':'white'}} click_val = {this.props.clicks}>2</div>
           <div class = 'button_properties' click_val = {this.props.clicks} style={{backgroundColor: (this.props.clickCount >= 3) ? '#81b731':'white'}} >3</div>
         </div>
-        <div id='shopping-button'>SHOPPING BAG</div>
+        <div id='shopping-button' onClick = {this.renderShoppingBag.bind(this)}>SHOPPING BAG</div>
       </div>
     )
   }
+
+
 }
 
 export default ProgressBar;
