@@ -66,8 +66,15 @@ class Step1 extends Component {
 
   addToCart(item) {
     var selected = this.state.selectedItems;
-    selected.push(item);
+    //check if the bag already has the item
+    //avoiding duplicates
+    if (selected.indexOf(item) < 0) {
+      selected.push(item);
+    }
+
     this.setState({selectedItems:selected});
+    var bag = this.state.selectedItems;
+    alert(`Your shopping bag has: ${bag}`)
   }
 
   search(event) {

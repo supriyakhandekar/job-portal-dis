@@ -132,6 +132,9 @@ class Step2 extends Component {
 
     var template_obj = {'greeting': greeting, 'middle': middle, 'end': end};
 
+
+    //var templates = this.state.templatesCreated;
+    //this.setState({templatesCreated:templates});
     //this.setState({templatesCreated: template_obj});
 
   }

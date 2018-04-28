@@ -16,11 +16,11 @@
 }
 /*code from codepen */
 .form-box {
-  height: 800px;
-  width: 800px;
+  height: 750px;
+  width: 750px;
   position: absolute;
-  bottom: -210%;
-  left: 20%;
+  margin-top: 130px;
+  left: 25%;
   opacity: 1;
   background-color:#81b731;
 }

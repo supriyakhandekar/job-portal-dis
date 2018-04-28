@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './MainPage.css';
-import './ProgressBar.css'
-import ProgressBar from'./ProgressBar.js'
-import Step1 from './step1.js'
-import Step2 from './step2.js'
-import Step3 from './step3.js'
-import Step4 from './step4.js'
-import Next_Button from './next_button.js'
+import './ProgressBar.css';
+import ProgressBar from'./ProgressBar.js';
+import Step1 from './step1.js';
+import Step2 from './step2.js';
+import Step3 from './step3.js';
+import Step4 from './step4.js';
+import Next_Button from './next_button.js';
+import $ from 'jquery';
 //import ReactScrollbar from 'react-scrollbar-js'
 
 
@@ -58,6 +59,12 @@ class MainPage extends Component {
     };
   }
 
+//code from https://gist.github.com/andjosh/6764939#file-animatedscrollto-js-L14
+
+
+//following smooth scroll code from
+// https://css-tricks.com/snippets/jquery/smooth-scrolling/
+
   render() {
     return (
       <div>
@@ -66,7 +73,7 @@ class MainPage extends Component {
           <div>C2TC</div>
           <p class='company-motto'>Cut to the chase</p>
           <a href='#section2' class='start-anchor'>
-            <div class='start-button' >GET STARTED</div>
+            <div class='start-button'>GET STARTED</div>
           </a>
         </div>
       </div>
