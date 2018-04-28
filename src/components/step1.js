@@ -82,6 +82,7 @@ class Step1 extends Component {
         newList = [],
         searchVal = event.target.value,
         i;
+
     /*
     for (i = 0; i < currentList.length; i++) {
       if(currentList[i].includes(searchVal)) {
@@ -91,6 +92,7 @@ class Step1 extends Component {
       this.setState({items : newList});
     }
     */
+
     currentList = currentList.filter(function(item){
       return item.toLowerCase().search(
         event.target.value.toLowerCase()) !== -1;

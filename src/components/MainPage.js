@@ -22,6 +22,8 @@ class MainPage extends Component {
     };
   }
 
+
+
   getBagItems(list) {
     //this.setState({bagItems : list});
   }
@@ -60,7 +62,6 @@ class MainPage extends Component {
   }
 
 //code from https://gist.github.com/andjosh/6764939#file-animatedscrollto-js-L14
-
 
 //following smooth scroll code from
 // https://css-tricks.com/snippets/jquery/smooth-scrolling/
