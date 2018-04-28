@@ -29,10 +29,17 @@ class MainPage extends Component {
     this.setState({showBagContent: !this.state.showBagContent});
   }
 
+
   renderBagItems(list) {
+    /*
     list.map(function(item) {
-      return (<div class='cart-item'>{item}</div>);
-    })
+      return <div class='cart-item'>{item}</div>;
+    }) */
+/*
+    for(var i = 0; i < length(list); i++) {
+    }
+  */
+
   }
 
   addToCart(list) {

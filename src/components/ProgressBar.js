@@ -9,7 +9,7 @@ class ProgressBar extends Component {
     this.state = {
       showBagContent: false
     };
-    this.toggleBagView = this.toggleBagView.bind(this);
+
   }
 
 
@@ -21,7 +21,6 @@ class ProgressBar extends Component {
              </div>
     })
   }
-
 
   toggleBagView() {
     this.setState({showBagContent: !this.state.showBagContent});
