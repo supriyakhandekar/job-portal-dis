@@ -8,14 +8,16 @@ class Step4 extends Component {
   constructor(props) {
     super(props);
     this.state = { /* initial state */ };
-  }
-
-  renderConfirmation() {
-
-
-
 
   }
+
+  /*
+  renderConfirmation(companyList) {
+    companyList.map(function(element) {
+        return (<div> {element} </div>)
+    }
+  } */
+
 
   render() {
     return (
@@ -27,9 +29,11 @@ class Step4 extends Component {
           <div class='search-results'>
             <p class='confirmation-page-text'>You are all set.</p>
             <div class='confirmation-container'>
-              <p class='company-confirmed'>Emails sent to:</p>
-              <p class='company-confirmed'>Spire to <em> Kate Antonucci </em> </p>
-              <p class='company-confirmed'>Mesosphere to <em>Pratyush More</em></p>
+             {
+              this.props.cart.map(function(item) {
+                return <div class='company-name'>{item}</div>
+              })
+             }
             </div>
           </div>
 
