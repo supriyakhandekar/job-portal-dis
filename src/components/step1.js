@@ -76,6 +76,7 @@ class Step1 extends Component {
     //alert(`Your shopping bag has: ${bag}`)
   }
 
+
   search(event) {
     var currentList = this.state.items,
         newList = [],

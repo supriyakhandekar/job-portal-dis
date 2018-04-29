@@ -192,6 +192,13 @@
   align-self: flex-start;
 }
 
+.bag-item {
+
+  background-color: cyan;
+  height: 40px;
+  width: 100px;
+
+}
 
 .shopping-list {
 

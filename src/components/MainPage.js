@@ -29,17 +29,10 @@ class MainPage extends Component {
     this.setState({showBagContent: !this.state.showBagContent});
   }
 
-
   renderBagItems(list) {
-    /*
     list.map(function(item) {
-      return <div class='cart-item'>{item}</div>;
-    }) */
-/*
-    for(var i = 0; i < length(list); i++) {
-    }
-  */
-
+      return <div class='bag-item'>{item}</div>
+    })
   }
 
   addToCart(list) {
@@ -111,7 +104,9 @@ class MainPage extends Component {
           <div class='shopping_cart'>
             <div id='shopping-button' onClick={this.toggleBagView.bind(this)}>SHOPPING BAG</div>
             <div class='shopping-list'>
-              {this.state.showBagContent ? this.renderBagItems(this.state.bagItems) : (null)}
+              {this.state.showBagContent ? this.state.bagItems.map(function(item) {
+                return <div>{item}</div>
+                }): (null)}
             </div>
           </div>
         </div>
