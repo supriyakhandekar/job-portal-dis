@@ -46,12 +46,15 @@ class MainPage extends Component {
     this.setState({bagItems : list});
   }
 
+  addTemplates(list) {
+    this.setState({templates : list});
+  }
+
   incrementStep = () => {
     this.setState({ clicks: this.state.clicks + 1 });
   }
 
   decrementStep = () => {
-
     if (this.state.clicks >= 1) {
       this.setState({ clicks: this.state.clicks - 1 });
     }
@@ -60,12 +63,10 @@ class MainPage extends Component {
 
   //update progress bar background colors
   renderStep(step_number) {
-
     if (step_number == 5) {
       step_number = 1
       this.setState({ clicks: 1});
     }
-
     switch(step_number) {
       case 1:
         return <Step1
@@ -76,7 +77,7 @@ class MainPage extends Component {
       case 3:
         return <Step3/>
       case 4:
-        return <Step4/>
+        return <Step4 cart = {this.state.bagItems}/>
       default:
         return <Step1/>
     };

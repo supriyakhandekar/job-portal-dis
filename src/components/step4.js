@@ -10,12 +10,19 @@ class Step4 extends Component {
     this.state = { /* initial state */ };
   }
 
+  renderConfirmation() {
+
+
+
+
+  }
+
   render() {
     return (
       <div class='box'>
         <div class='step-header'>
           <div class='step_number'>4</div>
-          <div class='step_description_component'>Step 4: Send</div>
+          <div class='step_description_component'>Send</div>
           </div>
           <div class='search-results'>
             <p class='confirmation-page-text'>You are all set.</p>

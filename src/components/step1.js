@@ -105,7 +105,7 @@ class Step1 extends Component {
       <div class='box'>
         <div class='step-header'>
           <div class='step_number'>1</div>
-          <div class='step_description_component'>Step 1: Find companies.</div>
+          <div class='step_description_component'>Find companies.</div>
         </div>
         <div class='step1_body'>
           <form>

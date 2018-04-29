@@ -15,7 +15,7 @@ class Step3 extends Component {
       <div class='box'>
         <div class='step-header'>
           <div class='step_number'>3</div>
-          <div class='step_description_component'>Step 3: Select emails.</div>
+          <div class='step_description_component'>Select emails.</div>
           <p class='select-all-box'> Select all</p>
           <input class='checkbox-style' type='checkbox' class='checkbox-style'/>
         </div>

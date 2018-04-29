@@ -195,14 +195,13 @@ class Step2 extends Component {
       popupDisplayed: !this.state.popupDisplayed
     });
   }
-
   render() {
     //following code and associated css from https://codepen.io/anon/pen/JLJMoO (for the table)
     return (
       <div class='box'>
         <div class='step-header'>
           <div class='step_number'>2</div>
-          <div class='step_description_component'>Step 2: Create Email Templates.</div>
+          <div class='step_description_component'>Create Email Templates.</div>
         </div>
           <div class='template-body'>
             <div class='template-text'>
