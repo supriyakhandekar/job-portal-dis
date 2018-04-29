@@ -6,3 +6,14 @@
   padding: 10 10 10 10;
   opacity: 0.7;
 }
+
+
+.confirmation-company {
+
+  height: 45px;
+  
+  display: flex;
+  align-items: center;
+  padding: 20px 20px 20px 20px;
+  background-color: #D3D3D3;
+}
