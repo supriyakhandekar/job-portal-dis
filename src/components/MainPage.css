@@ -165,11 +165,12 @@
 #shopping-button {
 
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   background-color: #81b731;
   align-items: center;
-  width: 120px;
-  height: 40px;
+  width: 150px;
+  height: 60px;
 
 }
 
@@ -179,6 +180,26 @@
   width: 100px;
   height: 60px;
   background-color: cyan;
+
+}
+
+
+.shopping-bag-item {
+
+  height: 45px;
+  padding: 5px 10px 10px 10px;
+  background-color: #D3D3D3;
+  display: flex;
+  align-items: center;
+  font-weight: 100;
+}
+
+
+.shopping-bag-item:hover {
+
+  color: white;
+  font-weight: 100;
+  background-color: #324159;
 
 }
 
@@ -202,8 +223,7 @@
 
 .shopping-list {
 
-  background-color: white;
-  width: 120px;
+  width: 150px;
   height: 400px;
 
 }

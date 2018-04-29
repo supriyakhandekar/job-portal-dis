@@ -53,7 +53,6 @@ class MainPage extends Component {
     }
   }
 
-
   //update progress bar background colors
   renderStep(step_number) {
     if (step_number == 5) {
@@ -105,7 +104,7 @@ class MainPage extends Component {
             <div id='shopping-button' onClick={this.toggleBagView.bind(this)}>SHOPPING BAG</div>
             <div class='shopping-list'>
               {this.state.showBagContent ? this.state.bagItems.map(function(item) {
-                return <div>{item}</div>
+                return <div class='shopping-bag-item'>{item}</div>
                 }): (null)}
             </div>
           </div>
