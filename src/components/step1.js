@@ -120,6 +120,13 @@ class Step1 extends Component {
                   <option value="volvo">Stanford</option>
                   <option value="volvo">NEA</option>
                 </select>
+                <p class='filter-option'>Industry:</p>
+                <select>
+                  <option value="volvo">Finance</option>
+                  <option value="volvo">Bio</option>
+                  <option value="volvo">B2B</option>
+                  <option value="volvo">Health</option>
+                </select>
               </div>
             </div>
           <div class='search-results'>

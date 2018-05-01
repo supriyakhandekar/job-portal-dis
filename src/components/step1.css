@@ -143,9 +143,9 @@ li:hover {
 
   font-family:'Abel', sans-serif;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
   display: flex;
-  margin-right: 80px;
+  margin-right: 100px;
 
 }
 
@@ -155,6 +155,7 @@ li:hover {
   color: white;
   font-family: 'Abel', sans-serif;
   margin-right: 8px;
+  margin-left: 12px;
 
 }
 
