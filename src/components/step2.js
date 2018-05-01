@@ -127,6 +127,8 @@ class Step2 extends Component {
     this.setState({formNames: updatedNames.concat(name)});
     this.setState({formDescriptions: updatedDesc.concat(description)});
     this.setState({formValue: obj});
+    this.props.addTemplate(this.state.formNames);
+
   }
   //gets values and generates a template
   //adds to state
@@ -227,7 +229,7 @@ class Step2 extends Component {
             <div class='template-text'>=
                   <div class='template_body'>MY TEMPLATES:</div>
                   <div class='new_template_button' onClick = {this.togglePopup.bind(this)}>Add New Template</div>
-                  {this.state.popupDisplayed ? <TemplateForm closePopup={this.togglePopup.bind(this)} getFormValues = {this.getFormValues.bind(this)}/> : null}
+                  {this.state.popupDisplayed ? <TemplateForm addTemplate = {this.props.addTemplates} closePopup={this.togglePopup.bind(this)} getFormValues = {this.getFormValues.bind(this)}/> : null}
             </div>
             <div class='template_container'>
               <table class="table-fill">

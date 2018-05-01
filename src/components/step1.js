@@ -108,12 +108,20 @@ class Step1 extends Component {
           <div class='step_description_component'>Find companies.</div>
         </div>
         <div class='step1_body'>
-          <form>
             <p class='text-style'></p>
-            <label class='text-style'>
+            <div class='step1-filter-container'>
               <input class='search' type="text" name="name" placeholder="Magic Leap" onChange={this.search.bind(this)}/>
-            </label>
-          </form>
+              <div class='filter-box'>
+                <p class='filter-text'>FILTER BY</p>
+                <p class='filter-option'>Investor:</p>
+                <select>
+                  <option value="volvo">A16Z</option>
+                  <option value="volvo">Greylock</option>
+                  <option value="volvo">Stanford</option>
+                  <option value="volvo">NEA</option>
+                </select>
+              </div>
+            </div>
           <div class='search-results'>
             <p class='text-style' id='text-style-black'>Results</p>
             <List items={this.state.items}  addToCart={this.addToCart.bind(this)}/>

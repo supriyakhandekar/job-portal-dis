@@ -39,6 +39,7 @@ class MainPage extends Component {
     this.setState({bagItems : list});
   }
 
+
   addTemplates(list) {
     this.setState({templates : list});
   }
@@ -65,7 +66,7 @@ class MainPage extends Component {
                   cart = {this.state.bagItems}
                   addToCart = {this.addToCart.bind(this)}/>
       case 2:
-        return <Step2 />
+        return <Step2 addTemplates = {this.addTemplates.bind(this)} />
       case 3:
         return <Step3 cart = {this.state.bagItems}/>
       case 4:
