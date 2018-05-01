@@ -24,7 +24,6 @@ class TemplateForm extends Component {
     this.handleChangeExp = this.handleChangeExp.bind(this);
     this.handleChangeIntro = this.handleChangeIntro.bind(this);
     this.handleChangeConc = this.handleChangeConc.bind(this);
-    //this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChangeName(event) {
@@ -97,25 +96,36 @@ class Step2 extends Component {
     super(props);
     this.state = {
       popupDisplayed :false,
-      formValue : {},
+      formNames: [],
+      formDescriptions: [],
+      formValues : {},
       templatesCreated : []
     };
+
+    this.renderTemplateEntries = this.renderTemplateEntries.bind(this);
+
   }
   //intialize some example templates that can be rendered immediately
   //example_templates = []
   //this array will be added to when a user generates a new template
   //user_templates = []
 
-
   getFormValues(name, description, intro, position, experience, conclusion) {
 
-    var obj = { name_key: name,
+    var obj = {name_key: name,
            description_key: description,
            intro_key: intro,
            position_key: position,
            experience_key: experience,
            conclusion_key: conclusion };
 
+    //create two more arrays for template name and desriptions
+
+    var updatedNames = this.state.formNames,
+        updatedDesc = this.state.formDescriptions;
+
+    this.setState({formNames: updatedNames.concat(name)});
+    this.setState({formDescriptions: updatedDesc.concat(description)});
     this.setState({formValue: obj});
   }
   //gets values and generates a template
@@ -132,7 +142,6 @@ class Step2 extends Component {
 
     var template_obj = {'greeting': greeting, 'middle': middle, 'end': end};
 
-
     //var templates = this.state.templatesCreated;
     //this.setState({templatesCreated:templates});
     //this.setState({templatesCreated: template_obj});
@@ -143,13 +152,16 @@ class Step2 extends Component {
 
   showPreview(obj) {
 
-    this.createTemplate(obj);
+    //this.createTemplate(obj);
     var template_string = this.state.templatesCreated;
     return <div>Test</div>
   }
 
 
-  renderTemplateEntries(obj) {
+  renderTemplateEntries() {
+    //make this append
+
+    /*
     var table_frame = <table class="table-fill">
                           <thead>
                             <tr>
@@ -159,15 +171,21 @@ class Step2 extends Component {
                           </thead>
                           <tbody class="table-hover">
                             <tr>
-                              <td class="text-left" onClick = {this.showPreview(obj)}>{obj.name_key}</td>
-                              <td class="text-left">{obj.description_key}</td>
+                              {this.state.formNames.map(function(item) {
+                                return <td class="text-left">Test1</td>
+                              })}
+                              {this.state.formDescriptions.map(function(item) {
+                               return <td class="text-left">Test2</td>
+                              })
+                              }
                             </tr>
                           </tbody>
                       </table>;
-
+                */
     //generate template string
-    this.createTemplate(obj);
-    return table_frame;
+    //this.createTemplate(obj);
+    //return table_frame;
+
    }
     //generate string of template renderTemplateEntries
     //while there are elements in the json list
@@ -195,6 +213,8 @@ class Step2 extends Component {
       popupDisplayed: !this.state.popupDisplayed
     });
   }
+
+
   render() {
     //following code and associated css from https://codepen.io/anon/pen/JLJMoO (for the table)
     return (
@@ -204,13 +224,26 @@ class Step2 extends Component {
           <div class='step_description_component'>Create Email Templates.</div>
         </div>
           <div class='template-body'>
-            <div class='template-text'>
+            <div class='template-text'>=
                   <div class='template_body'>MY TEMPLATES:</div>
                   <div class='new_template_button' onClick = {this.togglePopup.bind(this)}>Add New Template</div>
                   {this.state.popupDisplayed ? <TemplateForm closePopup={this.togglePopup.bind(this)} getFormValues = {this.getFormValues.bind(this)}/> : null}
             </div>
             <div class='template_container'>
-              {this.renderTemplateEntries(this.state.formValue)}
+              <table class="table-fill">
+                    <thead>
+                      <tr>
+                        <th class="text-left">TEMPLATE NAME</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-hover">
+                        {this.state.formNames.map(function(item) {
+                          return <tr>
+                                  <td class="text-left">{item}</td>
+                                </tr>
+                        })}
+                    </tbody>
+              </table>
             </div>
           </div>
       </div>

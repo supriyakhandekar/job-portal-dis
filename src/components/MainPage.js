@@ -67,7 +67,7 @@ class MainPage extends Component {
       case 2:
         return <Step2 />
       case 3:
-        return <Step3/>
+        return <Step3 cart = {this.state.bagItems}/>
       case 4:
         return <Step4 cart = {this.state.bagItems}/>
       default:

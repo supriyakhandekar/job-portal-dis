@@ -92,7 +92,6 @@ class Step1 extends Component {
       this.setState({items : newList});
     }
     */
-
     currentList = currentList.filter(function(item){
       return item.toLowerCase().search(
         event.target.value.toLowerCase()) !== -1;
