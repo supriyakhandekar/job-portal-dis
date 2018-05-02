@@ -57,7 +57,19 @@ class Step1 extends Component {
         "Within",
         "Kensho",
         "Medium",
-        "Mesosphere"],
+        "Mesosphere",
+        '500px',
+        'Affirm',
+        'Bluebox Security',
+        'Buzzfeed',
+        'Databricks',
+        'Freenome',
+        'Kno',
+        'Mesosphere',
+        'Optimizely',
+        'Tanium',
+        'Tenfold',
+        'Zulily',],
         searchedItems : [],
         selectedItems: []
      };
@@ -76,6 +88,107 @@ class Step1 extends Component {
     //alert(`Your shopping bag has: ${bag}`)
   }
 
+handleFilterInvestor(event) {
+
+
+  var a16z = ['500px',
+            'Affirm',
+            'Bluebox Security',
+            'Buzzfeed',
+            'Databricks',
+            'Freenome',
+            'Kno',
+            'Mesosphere',
+            'Optimizely',
+            'Tanium',
+            'Tenfold',
+            'Zulily',
+          ];
+
+  var ycomb = [ 'CureSkin',
+              'Cashfree',
+              'Audm',
+              'Advano',
+              'Flock',
+              'Goosebump',
+              'Guggy',
+              'Indivio',
+              'Nimble',
+              'Polly',
+              'Pilot',
+              'Slik',
+              'Beek',
+              'Penny',
+              'Scribe',
+              'Coub',
+              'Expo',
+              'Lendsnap',
+              'Sage',
+              'Spotbot'];
+
+  var greylock = [ 'Aurora',
+                'BountyJobs',
+                'WildTangent',
+                'AwakeSecurity',
+                'Apptio',
+                'Caffeine',
+                'Cato Networks',
+                'Delphix',
+                'Sigma',
+                'GoFundMe',
+                'HealthHiway',
+                'Lightbend',
+                'Innovium',
+                'PullString',
+                'Upserve',
+                'Xapo' ];
+
+  var value = event.target.value;
+
+  switch(value) {
+
+    case 'a16z':
+      this.setState({items: a16z});
+      break;
+
+    case 'ycomb':
+      this.setState({items: ycomb});
+      break;
+
+    case 'greylock':
+      this.setState({items: greylock});
+      break;
+  }
+
+}
+
+
+handleFilterIndustry(event) {
+
+  var value = event.target.value;
+
+}
+
+  /*
+  a16z(event) {
+
+    alert('hey');
+
+  }
+
+  nea(event) {
+
+
+  }
+
+  ycombinator(event) {
+
+  }
+
+  greylock(event) {
+
+  }
+*/
 
   search(event) {
     var currentList = this.state.items,
@@ -114,18 +227,17 @@ class Step1 extends Component {
               <div class='filter-box'>
                 <p class='filter-text'>FILTER BY</p>
                 <p class='filter-option'>Investor:</p>
-                <select>
-                  <option value="volvo">A16Z</option>
-                  <option value="volvo">Greylock</option>
-                  <option value="volvo">Stanford</option>
-                  <option value="volvo">NEA</option>
+                <select onChange = {this.handleFilterInvestor.bind(this)}>
+                  <option value="a16z">A16Z</option>
+                  <option value="greylock">Greylock</option>
+                  <option value="ycomb">YCombinator</option>
                 </select>
                 <p class='filter-option'>Industry:</p>
-                <select>
-                  <option value="volvo">Finance</option>
-                  <option value="volvo">Bio</option>
-                  <option value="volvo">B2B</option>
-                  <option value="volvo">Health</option>
+                <select onChange = {this.handleFilterIndustry.bind(this)}>
+                  <option value="finance">Finance</option>
+                  <option value="bio">Bio</option>
+                  <option value="b2b">B2B</option>
+                  <option value="health">Health</option>
                 </select>
               </div>
             </div>

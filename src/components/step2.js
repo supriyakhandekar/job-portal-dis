@@ -127,7 +127,8 @@ class Step2 extends Component {
     this.setState({formNames: updatedNames.concat(name)});
     this.setState({formDescriptions: updatedDesc.concat(description)});
     this.setState({formValue: obj});
-    this.props.addTemplate(this.state.formNames);
+    //this.props.addTemplate(this.state.formNames);
+    
 
   }
   //gets values and generates a template
