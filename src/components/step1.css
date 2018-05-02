@@ -26,6 +26,13 @@
 
 }
 
+.test-step3 {
+
+  background-color: cyan;
+  width: 300px;
+  height: 100px;
+}
+
 .list-item {
   display: flex;
   flex-direction: row;

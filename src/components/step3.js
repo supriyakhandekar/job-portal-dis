@@ -31,42 +31,27 @@ class Step3 extends Component {
               </tr>
             </thead>
             <tbody class="table-hover">
-              <tr>
-                <td class="text-left">Spire</td>
-                <td class="text-left">Kate Antonucci</td>
-                <td class="text-left">Recruiter</td>
-                <td class="text-left">
-                  <select>
-                    <option value="volvo">Sample Template</option>
-                    <option value="volvo">Tech Companies</option>
-                  </select>
-                </td>
-                <td class="text-left">kantonucci@spire.net</td>
-                <td class="text-left">
-                  <a href="">
-                    <div class='magnifying-glass'>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-left">Mesosphere</td>
-                <td class="text-left">Pratyush More</td>
-                <td class="text-left">Recruiter</td>
-                <td class="text-left">
-                  <select>
-                    <option value="volvo">Sample Template</option>
-                    <option value="volvo">Tech Companies</option>
-                  </select>
-                </td>
-                <td class="text-left">pmore@mesos.com</td>
-                <td class="text-left">
-                  <a href="">
-                    <div class='magnifying-glass'>
-                    </div>
-                  </a>
-                </td>
-              </tr>
+              {this.props.cart.map(function(item) {
+                  return <tr>
+                    <td class="text-left">{item}</td>
+                    <td class="text-left">Kate Antonucci</td>
+                    <td class="text-left">Recruiter</td>
+                    <td class="text-left">
+                      <select>
+                        <option value="volvo">Sample Template</option>
+                        <option value="volvo">Tech Companies</option>
+                      </select>
+                    </td>
+                    <td class="text-left">kantonucci@spire.net</td>
+                    <td class="text-left">
+                      <a href="">
+                        <div class='magnifying-glass'>
+                        </div>
+                      </a>
+                    </td>
+                  </tr>
+                })
+              }
             </tbody>
         </table>
       </div>
